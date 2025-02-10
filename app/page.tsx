@@ -57,7 +57,7 @@ export default function Home() {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="mt-6 text-lg leading-8 text-muted-foreground"
           >
-            I'm a passionate developer focused on creating beautiful and functional web experiences.
+            Im a passionate developer focused on creating beautiful and functional web experiences.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

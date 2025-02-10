@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
+import Image from 'next/image';
 
 export default function About() {
   return (
@@ -18,7 +19,7 @@ export default function About() {
             <CardContent className="p-6">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1517849845537-4d257902454a"
                     alt="Profile"
                     className="rounded-lg w-full object-cover aspect-square"
@@ -27,20 +28,20 @@ export default function About() {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-semibold">Hello! 👋</h2>
                   <p className="text-muted-foreground">
-                    I'm a passionate developer with a love for creating beautiful and functional web applications.
+                    Im a passionate developer with a love for creating beautiful and functional web applications.
                     I specialize in modern web technologies and always strive to learn and grow in this ever-evolving field.
                   </p>
                   <div className="space-y-2">
                     <h3 className="text-lg font-semibold">Experience</h3>
                     <p className="text-muted-foreground">
-                      With several years of experience in web development, I've worked on various projects
+                      With several years of experience in web development, Ive worked on various projects
                       ranging from small business websites to large-scale applications.
                     </p>
                   </div>
                   <div className="space-y-2">
                     <h3 className="text-lg font-semibold">Interests</h3>
                     <p className="text-muted-foreground">
-                      When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
+                      When Im not coding, you can find me exploring new technologies, contributing to open-source projects,
                       or sharing knowledge with the developer community.
                     </p>
                   </div>
