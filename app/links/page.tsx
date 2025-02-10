@@ -3,32 +3,26 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Github, Mail, X } from 'lucide-react';
 
 const links = [
   {
     title: 'GitHub',
     description: 'Check out my open source projects and contributions',
     icon: Github,
-    url: 'https://github.com',
+    url: 'https://github.com/lvncer',
   },
   {
-    title: 'Twitter',
+    title: 'X',
     description: 'Follow me for tech updates and insights',
-    icon: Twitter,
+    icon: X,
     url: 'https://twitter.com',
-  },
-  {
-    title: 'LinkedIn',
-    description: 'Connect with me professionally',
-    icon: Linkedin,
-    url: 'https://linkedin.com',
   },
   {
     title: 'Email',
     description: 'Get in touch with me directly',
     icon: Mail,
-    url: 'mailto:example@example.com',
+    url: 'negimasa58@gmail.com',
   },
 ];
 

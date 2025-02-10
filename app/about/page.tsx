@@ -20,9 +20,11 @@ export default function About() {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <Image
-                    src="https://images.unsplash.com/photo-1517849845537-4d257902454a"
+                    src="/profile.png"
                     alt="Profile"
                     className="rounded-lg w-full object-cover aspect-square"
+                    width={50}
+                    height={50}
                   />
                 </div>
                 <div className="space-y-4">
