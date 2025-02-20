@@ -1,28 +1,34 @@
-"use client"
+"use client";
 
-import { motion } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Github, Mail, X } from 'lucide-react';
+import { motion } from "framer-motion";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Github, Mail, ChartNoAxesColumn } from "lucide-react";
 
 const links = [
   {
-    title: 'GitHub',
-    description: 'Check out my open source projects and contributions',
+    title: "GitHub",
+    description: "Check out my open source projects and contributions",
     icon: Github,
-    url: 'https://github.com/lvncer',
+    url: "https://github.com/lvncer",
   },
   {
-    title: 'X',
-    description: 'Follow me for tech updates and insights',
-    icon: X,
-    url: 'https://twitter.com',
+    title: "Zenn",
+    description: "Read my articles on web development and programming",
+    icon: ChartNoAxesColumn,
+    url: "https://zenn.dev/tkszenn",
   },
   {
-    title: 'Email',
-    description: 'Get in touch with me directly',
+    title: "Email",
+    description: "Get in touch with me directly",
     icon: Mail,
-    url: 'negimasa58@gmail.com',
+    url: "negimasa58@gmail.com",
   },
 ];
 
@@ -57,7 +63,11 @@ export default function Links() {
                   </CardHeader>
                   <CardContent>
                     <Button asChild variant="secondary" className="w-full">
-                      <a href={link.url} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Visit {link.title}
                       </a>
                     </Button>

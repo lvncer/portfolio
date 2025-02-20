@@ -1,18 +1,20 @@
-"use client"
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
-import { MoonIcon, SunIcon } from 'lucide-react';
-import { useTheme } from 'next-themes';
-import { Button } from '@/components/ui/button';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import { MoonIcon, SunIcon } from "lucide-react";
+import { useTheme } from "next-themes";
+import { Button } from "@/components/ui/button";
 
 const navItems = [
-  { path: '/', label: 'Home' },
-  { path: '/about', label: 'About' },
-  { path: '/skills', label: 'Skills' },
-  { path: '/links', label: 'Links' },
+  { path: "/", label: "Home" },
+  { path: "/about", label: "About" },
+  { path: "/skills", label: "Skills" },
+  { path: "/certifications", label: "Certifications" },
+  { path: "/projects", label: "Projects" },
+  { path: "/links", label: "Links" },
 ];
 
 export default function Navbar() {
@@ -39,7 +41,7 @@ export default function Navbar() {
                   transition={{
                     type: "spring",
                     stiffness: 350,
-                    damping: 30
+                    damping: 30,
                   }}
                 />
               )}
