@@ -1,16 +1,85 @@
-"use client"
+"use client";
 
-import { motion } from 'framer-motion';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
+import { motion } from "framer-motion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Code2,
+  FileCode2,
+  Braces,
+  Blocks,
+  Binary,
+  LayoutTemplate,
+  Atom,
+  TestTube,
+  Paintbrush,
+  Database,
+  Server,
+  Cpu,
+  Container,
+  Cloud,
+  GitBranch,
+  Workflow,
+} from "lucide-react";
 
-const skills = [
-  { name: 'Next.js', level: 90 },
-  { name: 'React', level: 95 },
-  { name: 'TypeScript', level: 85 },
-  { name: 'Node.js', level: 80 },
-  { name: 'CSS/Tailwind', level: 90 },
-  { name: 'Database Design', level: 75 },
+const skillCategories = [
+  {
+    title: "プログラミング言語",
+    icon: Code2,
+    skills: [
+      { name: "Python", level: 100, icon: Braces },
+      { name: "JavaScript", level: 95, icon: Braces },
+      { name: "TypeScript", level: 90, icon: Braces },
+      { name: "PHP", level: 75, icon: Braces },
+      { name: "Swift", level: 50, icon: Braces },
+      { name: "Go", level: 20, icon: Braces },
+    ],
+  },
+  {
+    title: "フレームワーク",
+    icon: LayoutTemplate,
+    skills: [
+      { name: "React", level: 90, icon: Atom },
+      { name: "Node.js", level: 85, icon: Atom },
+      { name: "TailwindCSS", level: 80, icon: Atom },
+      { name: "Redux", level: 80, icon: Atom },
+      { name: "Express.js", level: 80, icon: Atom },
+    ],
+  },
+  {
+    title: "ライブラリ/ツール",
+    icon: TestTube,
+    skills: [
+      { name: "Flask", level: 90, icon: Paintbrush },
+      { name: "Fast API", level: 90, icon: Paintbrush },
+      { name: "Django", level: 60, icon: Paintbrush },
+      { name: "Next.js", level: 95, icon: Paintbrush },
+      { name: "Astro", level: 90, icon: Paintbrush },
+      { name: "React Native", level: 65, icon: Paintbrush },
+    ],
+  },
+  {
+    title: "データベース",
+    icon: Database,
+    skills: [
+      { name: "MySQL", level: 100, icon: Database },
+      { name: "SQLite", level: 90, icon: Database },
+      { name: "Supabase", level: 85, icon: Database },
+      { name: "MongoDB", level: 95, icon: Database },
+      { name: "Firebase", level: 85, icon: Database },
+    ],
+  },
+  {
+    title: "その他",
+    icon: Cpu,
+    skills: [
+      { name: "Git", level: 95, icon: GitBranch },
+      { name: "Docker", level: 70, icon: Container },
+      { name: "AWS", level: 80, icon: Cloud },
+      { name: "Figma", level: 90, icon: Cloud },
+      { name: "Linux", level: 90, icon: Cloud },
+      { name: "CI/CD", level: 85, icon: Workflow },
+    ],
+  },
 ];
 
 export default function Skills() {
@@ -24,26 +93,61 @@ export default function Skills() {
           className="max-w-4xl mx-auto"
         >
           <h1 className="text-4xl font-bold mb-8">Skills</h1>
-          <div className="grid gap-6">
-            {skills.map((skill, index) => (
-              <motion.div
-                key={skill.name}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
+          <div className="space-y-12">
+            {skillCategories.map((category, categoryIndex) => (
+              <motion.section
+                key={category.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: categoryIndex * 0.1 }}
               >
-                <Card>
-                  <CardHeader className="pb-4">
-                    <CardTitle className="text-lg">{skill.name}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <Progress value={skill.level} className="h-2" />
-                    <p className="text-sm text-muted-foreground mt-2">
-                      {skill.level}% proficiency
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
+                <div className="flex items-center gap-3 mb-6">
+                  <category.icon className="w-8 h-8" />
+                  <h2 className="text-2xl font-semibold">{category.title}</h2>
+                </div>
+                <div className="grid gap-4 md:grid-cols-2">
+                  {category.skills.map((skill, skillIndex) => (
+                    <motion.div
+                      key={skill.name}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{
+                        delay: categoryIndex * 0.1 + skillIndex * 0.05,
+                      }}
+                    >
+                      <Card>
+                        <CardHeader className="pb-4">
+                          <div className="flex items-center gap-3">
+                            <skill.icon className="w-5 h-5" />
+                            <CardTitle className="text-lg">
+                              {skill.name}
+                            </CardTitle>
+                          </div>
+                        </CardHeader>
+                        <CardContent>
+                          <div className="space-y-2">
+                            <div className="relative w-full h-2 bg-secondary rounded-full overflow-hidden">
+                              <motion.div
+                                initial={{ width: 0 }}
+                                animate={{ width: `${skill.level}%` }}
+                                transition={{
+                                  duration: 0.8,
+                                  delay:
+                                    categoryIndex * 0.1 + skillIndex * 0.05,
+                                }}
+                                className="absolute top-0 left-0 h-full bg-primary rounded-full"
+                              />
+                            </div>
+                            <p className="text-sm text-muted-foreground">
+                              {skill.level}% proficiency
+                            </p>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.section>
             ))}
           </div>
         </motion.div>

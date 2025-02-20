@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
-import Image from 'next/image';
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -30,21 +30,18 @@ export default function About() {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-semibold">Hello! 👋</h2>
                   <p className="text-muted-foreground">
-                    Im a passionate developer with a love for creating beautiful and functional web applications.
-                    I specialize in modern web technologies and always strive to learn and grow in this ever-evolving field.
+                    フルスタックエンジニアやシステムエンジニア、セキュリティエンジニアなどまだまだやりたいことが決まっていないです。
                   </p>
                   <div className="space-y-2">
                     <h3 className="text-lg font-semibold">Experience</h3>
                     <p className="text-muted-foreground">
-                      With several years of experience in web development, Ive worked on various projects
-                      ranging from small business websites to large-scale applications.
+                      WEBアプリ開発やシステム開発など、チームワークを含めて様々な開発を経験してきました。
                     </p>
                   </div>
                   <div className="space-y-2">
                     <h3 className="text-lg font-semibold">Interests</h3>
                     <p className="text-muted-foreground">
-                      When Im not coding, you can find me exploring new technologies, contributing to open-source projects,
-                      or sharing knowledge with the developer community.
+                      コーディングしていないときは、新しい技術を探求したり、オープンソースプロジェクトに貢献したり、開発者コミュニティと知識を共有したりしています。
                     </p>
                   </div>
                 </div>
