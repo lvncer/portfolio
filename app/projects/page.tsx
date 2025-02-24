@@ -12,7 +12,7 @@ const projects = [
     title: "Next SNS",
     description:
       "Next.jsとNode.Jsを使用したモダンなSNSサイト。MongoDBと連携したAPIサーバーを間に挟むことで高い保守性が保たれる。",
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b",
+    image: "/nextsns.png",
     technologies: [
       "Next.js",
       "TypeScript",
