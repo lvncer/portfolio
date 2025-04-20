@@ -6,27 +6,37 @@ import { Badge } from "@/components/ui/badge";
 
 const certifications = [
   {
-    title: "AWS Certified Solutions Architect",
-    date: "2024",
-    organization: "Amazon Web Services",
-    description:
-      "クラウドアーキテクチャの設計と実装に関する専門知識を証明する認定資格",
-  },
-  {
     title: "基本情報技術者",
     date: "2023",
     organization: "IPA",
     description: "ITスキル・知識を公式に認定する国家資格",
   },
+  {
+    title: "情報セキュリティマネジメント試験",
+    date: "2023",
+    organization: "IPA",
+    description: "情報セキュリティに関する知識を問う国家資格",
+  },
 ];
 
 const experiences = [
   {
-    title: "第一回ドロカツ プログラミング部門優勝",
-    company: "ドロカツ実行委員会",
-    period: "2024",
-    description: "ドローンのプログラミングや操縦に関する大会",
-    skills: ["Python"],
+    title: "スマホ向けインタラクティブシステム LiveFx",
+    company: "",
+    period: "2025",
+    description:
+      "プロジェクトマネージャーとフロントエンドを主に担当しました。入学式プレゼンテーションで観客のスマホでカラフルなアニメーションなどを行い、特に3000台以上のスマホの同期と、リアルタイムでのデータのやり取りを行うために保守性の高いWebSocketを用いたシステム設計を行いました。",
+    skills: [
+      "React",
+      "TypeScript",
+      "WebSocket",
+      "Docker",
+      "k8s",
+      "Node.js",
+      "AWS",
+      "Prometheus",
+      "Grafana",
+    ],
   },
   {
     title: "自動運転AIチャレンジ2024 予選出場",
@@ -35,6 +45,13 @@ const experiences = [
     description:
       "オンラインのシミュレーションで実施します。予選の競技はデジタルツイン指向のAWSIMを用いてコースをより速く走行することを目指します",
     skills: ["ROS", "Ubuntu", "Docker"],
+  },
+  {
+    title: "第一回ドロカツ プログラミング部門優勝",
+    company: "ドロカツ実行委員会",
+    period: "2024",
+    description: "ドローンのプログラミングや操縦に関する大会",
+    skills: ["Python"],
   },
 ];
 
@@ -49,7 +66,7 @@ export default function Certifications() {
           className="max-w-4xl mx-auto space-y-12"
         >
           <section>
-            <h1 className="text-4xl font-bold mb-8">資格</h1>
+            <h1 className="text-4xl font-bold mb-8">保有している資格</h1>
             <div className="grid gap-6">
               {certifications.map((cert, index) => (
                 <motion.div
@@ -78,7 +95,7 @@ export default function Certifications() {
           </section>
 
           <section>
-            <h1 className="text-4xl font-bold mb-8">職務経験</h1>
+            <h1 className="text-4xl font-bold mb-8">外部での経験</h1>
             <div className="grid gap-6">
               {experiences.map((exp, index) => (
                 <motion.div

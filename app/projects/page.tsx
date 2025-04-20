@@ -9,6 +9,15 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "Bookmarks",
+    description:
+      "Next.Js、Clerk、Supabaseを使用したシンプルなブックマークマネージャー。Clerkによるユーザ認証とSupabaseの高速データベースにより、快適な操作性を実現。",
+    image: "/bookmark.png",
+    technologies: ["Next.Js", "TypeScript", "Supabase", "Clerk"],
+    github: "https://github.com/lvncer/bookmarks",
+    live: "https://bookmarks-gamma-vert.vercel.app",
+  },
+  {
     title: "Next SNS",
     description:
       "Next.jsとNode.Jsを使用したモダンなSNSサイト。MongoDBと連携したAPIサーバーを間に挟むことで高い保守性が保たれる。",
@@ -25,15 +34,6 @@ const projects = [
     ],
     github: "https://github.com/lvncer/nextsns",
     live: "https://nextsns-one.vercel.app",
-  },
-  {
-    title: "Bookmarks",
-    description:
-      "Next.Js、Clerk、Supabaseを使用したシンプルなブックマークマネージャー。Clerkによるユーザ認証とSupabaseの高速データベースにより、快適な操作性を実現。",
-    image: "/bookmark.png",
-    technologies: ["Next.Js", "TypeScript", "Supabase", "Clerk"],
-    github: "https://github.com/lvncer/bookmarks",
-    live: "https://bookmarks-gamma-vert.vercel.app",
   },
 ];
 

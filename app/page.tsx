@@ -9,26 +9,26 @@ import { Card, CardContent } from "@/components/ui/card";
 const features = [
   {
     icon: Code2,
-    title: "Clean Code",
-    description:
-      "Writing elegant, maintainable, and efficient code is my passion",
+    title: "高い志向性",
+    description: "常に最高品質を目指し、洗練されたコードと成果物を提供します。",
   },
   {
     icon: Sparkles,
-    title: "Creative Solutions",
-    description: "Turning complex problems into simple, beautiful solutions",
+    title: "豊富な経験",
+    description:
+      "多様なプロジェクトで培った経験を活かし、価値あるソリューションを実現します。",
   },
   {
     icon: Rocket,
-    title: "Fast Performance",
-    description: "Optimizing for the best possible user experience",
+    title: "優れたコミュニケーション力",
+    description: "チームやクライアントと円滑に連携し、アイデアを形にします。",
   },
 ];
 
 export default function Home() {
   return (
     <div className="min-h-screen pt-16">
-      <div className="container mx-auto px-4 py-24">
+      <div className="container mx-auto px-4 py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -57,8 +57,9 @@ export default function Home() {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="mt-6 text-lg leading-8 text-muted-foreground"
           >
-            Im a passionate developer focused on creating beautiful and
-            functional web experiences.
+            私は、様々な社会的課題に対して
+            <br />
+            美しく機能的なシステム体験を創り出すことを目指しています。
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -79,7 +80,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className="mt-24 grid gap-8 md:grid-cols-3"
+          className="mt-20 grid gap-8 md:grid-cols-3"
         >
           {features.map((feature, index) => (
             <motion.div
@@ -116,14 +117,14 @@ export default function Home() {
               >
                 Privacy Policy
               </Link>
-              <a
-                href="https://github.com/lvncer"
+              <Link
+                href="https://github.com/lvncer/portfolio"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Github className="h-5 w-5" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

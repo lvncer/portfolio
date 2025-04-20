@@ -20,7 +20,7 @@ export default function About() {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <Image
-                    src="/profile.png"
+                    src="/profile.JPG"
                     alt="Profile"
                     className="rounded-lg w-full object-cover aspect-square"
                     width={50}
@@ -28,7 +28,7 @@ export default function About() {
                   />
                 </div>
                 <div className="space-y-4">
-                  <h2 className="text-2xl font-semibold">Hello! 👋</h2>
+                  <h2 className="text-2xl font-semibold">Hello! 👋  Im Takahashi.</h2>
                   <p className="text-muted-foreground">
                     フルスタックエンジニアやシステムエンジニア、セキュリティエンジニアなどまだまだやりたいことが決まっていないです。
                   </p>
