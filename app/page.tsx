@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Code2, Sparkles, Rocket } from "lucide-react";
+import { Github, Code2, Sparkles, Rocket, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 const features = [
   {
@@ -28,7 +29,7 @@ const features = [
 export default function Home() {
   return (
     <div className="min-h-screen pt-16">
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -68,7 +69,7 @@ export default function Home() {
             className="mt-10 flex items-center justify-center gap-4"
           >
             <Button asChild>
-              <Link href="/about">
+              <Link href="#about">
                 Learn more about me
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -101,6 +102,51 @@ export default function Home() {
               </Card>
             </motion.div>
           ))}
+        </motion.div>
+      </div>
+
+      <div className="container mx-auto px-4 pt-4 pb-32" id="about">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-4xl mx-auto"
+        >
+          <h1 className="text-4xl font-bold mb-8">About Me</h1>
+          <Card>
+            <CardContent className="p-6">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <Image
+                    src="/profile.JPG"
+                    alt="Profile"
+                    className="rounded-lg w-full object-cover aspect-square"
+                    width={50}
+                    height={50}
+                  />
+                </div>
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-semibold">Hello👋</h2>
+                  <p className="text-muted-foreground">
+                    さいたまIT・WEB専門学校 高度専門士情報技術科
+                    ３年の高橋といいます。システム開発のフルスタックエンジニアを目指しています。
+                  </p>
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-semibold">Experience</h3>
+                    <p className="text-muted-foreground">
+                      WEBアプリやシステムなどの開発を、チームを含めて積極的に挑戦し、経験してきました。この経験を生かしてさらに成長していきたいと考えています。
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-semibold">Interests</h3>
+                    <p className="text-muted-foreground">
+                      コーディングしていないときは、新しい技術を探求したり、オープンソースプロジェクトに貢献したり、開発者コミュニティと知識を共有したりしています。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </motion.div>
       </div>
 

@@ -9,6 +9,15 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "LightningTalks",
+    description:
+      "Next.Js、Clerk、Neonを使用したライトニングトーク登録サイト。もともと、学校でLTを行いたいという意見が多かったため、学校の学生だけでなく、外部のユーザも登録可能。",
+    image: "/lt.png",
+    technologies: ["Next.Js", "TypeScript", "Neon", "Clerk"],
+    github: "https://github.com/lvncer/lt",
+    live: "https://siw-lt.vercel.app",
+  },
+  {
     title: "Bookmarks",
     description:
       "Next.Js、Clerk、Supabaseを使用したシンプルなブックマークマネージャー。Clerkによるユーザ認証とSupabaseの高速データベースにより、快適な操作性を実現。",
@@ -45,10 +54,10 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-6xl mx-auto"
         >
           <h1 className="text-4xl font-bold mb-8">制作物</h1>
-          <div className="grid gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
