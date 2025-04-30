@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Threads from "./Threads";
 
 const features = [
   {
@@ -29,26 +30,18 @@ const features = [
 export default function Home() {
   return (
     <div className="min-h-screen pt-16">
-      <div className="container mx-auto px-4 py-32">
+      <div className="container mx-auto px-4 py-60">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="w-24 h-24 mx-auto mb-8 rounded-full bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center"
-          >
-            <span className="text-4xl">👋</span>
-          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="text-4xl font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600"
+            className="text-6xl font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600"
           >
             Welcome to My Portfolio
           </motion.h1>
@@ -56,11 +49,9 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="mt-6 text-lg leading-8 text-muted-foreground"
+            className="mt-6 text-md leading-8 text-muted-foreground"
           >
-            私は、様々な社会的課題に対して
-            <br />
-            美しく機能的なシステム体験を創り出すことを目指しています。
+            私は、様々な社会的課題に対して、美しく機能的なシステム体験を創り出すことを目指しています。
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -78,10 +69,27 @@ export default function Home() {
         </motion.div>
 
         <motion.div
+          style={{ width: "100%", height: "400px", position: "relative" }}
+        >
+          <Threads amplitude={1} distance={0} enableMouseInteraction={true} />
+        </motion.div>
+
+        <div className="mt-10 text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="text-3xl font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r text-gray-100"
+          >
+            Features
+          </motion.h1>
+        </div>
+
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className="mt-20 grid gap-8 md:grid-cols-3"
+          className="mt-28 grid gap-8 md:grid-cols-3"
         >
           {features.map((feature, index) => (
             <motion.div
@@ -126,11 +134,14 @@ export default function Home() {
                   />
                 </div>
                 <div className="space-y-4">
-                  <h2 className="text-2xl font-semibold">Hello👋</h2>
-                  <p className="text-muted-foreground">
-                    さいたまIT・WEB専門学校 高度専門士情報技術科
-                    ３年の高橋といいます。システム開発のフルスタックエンジニアを目指しています。
-                  </p>
+                  <h2 className="text-2xl font-semibold">はじめまして！</h2>
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-semibold">About me</h3>
+                    <p className="text-muted-foreground">
+                      さいたまIT・WEB専門学校 高度専門士情報技術科
+                      3年の高橋といいます。システム開発のフルスタックエンジニアを目指しています。
+                    </p>
+                  </div>
                   <div className="space-y-2">
                     <h3 className="text-lg font-semibold">Experience</h3>
                     <p className="text-muted-foreground">
