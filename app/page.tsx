@@ -1,12 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Code2, Sparkles, Rocket, ArrowRight } from "lucide-react";
+import { Code2, Sparkles, Rocket, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Threads from "./Threads";
 
 const features = [
   {
@@ -30,28 +29,37 @@ const features = [
 export default function Home() {
   return (
     <div className="min-h-screen pt-16">
-      <div className="container mx-auto px-4 py-60">
+      <div className="container mx-auto px-4 py-48">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto text-center"
+          className="max-w-5xl mx-auto text-center"
         >
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="text-6xl font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600"
+            className="text-4xl font-bold tracking-tight sm:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-700"
           >
             Welcome to My Portfolio
           </motion.h1>
+          <div className="mt-6" />
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="mt-6 text-md leading-8 text-muted-foreground"
+            className="text-lg leading-8 text-muted-foreground"
           >
-            私は、様々な社会的課題に対して、美しく機能的なシステム体験を創り出すことを目指しています。
+            私は、様々な社会的課題に対して、
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            className="text-lg leading-8 text-muted-foreground"
+          >
+            美しく機能的なシステム体験を創り出すことを目指しています。
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -59,7 +67,7 @@ export default function Home() {
             transition={{ delay: 0.6, duration: 0.5 }}
             className="mt-10 flex items-center justify-center gap-4"
           >
-            <Button asChild>
+            <Button variant="outline" asChild>
               <Link href="#about">
                 Learn more about me
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -69,27 +77,10 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          style={{ width: "100%", height: "400px", position: "relative" }}
-        >
-          <Threads amplitude={1} distance={0} enableMouseInteraction={true} />
-        </motion.div>
-
-        <div className="mt-10 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="text-3xl font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r text-gray-100"
-          >
-            Features
-          </motion.h1>
-        </div>
-
-        <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className="mt-28 grid gap-8 md:grid-cols-3"
+          className="mt-24 grid gap-8 md:grid-cols-3"
         >
           {features.map((feature, index) => (
             <motion.div
@@ -160,32 +151,6 @@ export default function Home() {
           </Card>
         </motion.div>
       </div>
-
-      <footer className="border-t border-border/40">
-        <div className="container mx-auto px-4 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-sm text-muted-foreground">
-              © 2025 lvncer. All rights reserved.
-            </div>
-            <div className="flex items-center gap-6">
-              <Link
-                href="/privacy"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="https://github.com/lvncer/portfolio"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Github className="h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

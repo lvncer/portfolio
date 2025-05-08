@@ -11,7 +11,7 @@ const projects = [
   {
     title: "LightningTalks",
     description:
-      "Next.Js、Clerk、Neonを使用したライトニングトーク登録サイト。もともと、学校でLTを行いたいという意見が多かったため、学校の学生だけでなく、外部のユーザも登録可能。",
+      "Next.Js、Clerk、Neonを使用したライトニングトーク登録サイト。もともと、学校でLTを行いたいという意見が多かったため作成。学校の学生だけでなく、外部のユーザも登録可能。",
     image: "/lt.png",
     technologies: ["Next.Js", "TypeScript", "Neon", "Clerk"],
     github: "https://github.com/lvncer/lt",
@@ -56,7 +56,8 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="max-w-6xl mx-auto"
         >
-          <h1 className="text-4xl font-bold mb-8">制作物</h1>
+          <h1 className="text-4xl font-bold py-6">制作物</h1>
+          <div className="mb-4" />
           <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <motion.div
@@ -66,10 +67,10 @@ export default function Projects() {
                 transition={{ delay: index * 0.1 }}
               >
                 <Card>
-                  <CardHeader className="pb-4">
+                  <CardHeader className="pb-2 text-2xl font-semibold">
                     <CardTitle>{project.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-4">
+                  <CardContent className="space-y-6">
                     <div className="aspect-video relative overflow-hidden rounded-lg">
                       <Image
                         src={project.image}
@@ -89,6 +90,7 @@ export default function Projects() {
                         </Badge>
                       ))}
                     </div>
+                    <div className="mt-4" />
                     <div className="flex gap-4">
                       <Button asChild variant="outline" size="sm">
                         <a

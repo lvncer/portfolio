@@ -6,7 +6,19 @@ import { Badge } from "@/components/ui/badge";
 
 const certifications = [
   {
-    title: "基本情報技術者",
+    title: "普通免許 (AT限定)",
+    date: "2025",
+    organization: "国家公安委員会",
+    description: "自動車運転免許",
+  },
+  {
+    title: "Paiza Bランク取得",
+    date: "2024",
+    organization: "Paiza",
+    description: "プログラミングスキルを証明する資格",
+  },
+  {
+    title: "基本情報技術者試験",
     date: "2023",
     organization: "IPA",
     description: "ITスキル・知識を公式に認定する国家資格",
@@ -67,7 +79,7 @@ export default function Certifications() {
         >
           <section>
             <h1 className="text-4xl font-bold mb-8">保有している資格</h1>
-            <div className="grid gap-6">
+            <div className="grid gap-3">
               {certifications.map((cert, index) => (
                 <motion.div
                   key={cert.title}
@@ -83,7 +95,7 @@ export default function Certifications() {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm text-muted-foreground mb-2">
+                      <p className="text-sm text-muted-foreground mb-1">
                         {cert.organization}
                       </p>
                       <p className="text-sm">{cert.description}</p>

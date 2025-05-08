@@ -3,32 +3,32 @@
 import { motion } from "framer-motion";
 import {
   Card,
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Github, Mail, ChartNoAxesColumn } from "lucide-react";
+import Link from "next/link";
 
 const links = [
   {
     title: "GitHub",
-    description: "Check out my open source projects and contributions",
+    description: "私のオープンソースプロジェクトと貢献を確認できます",
     icon: Github,
     url: "https://github.com/lvncer",
   },
   {
     title: "Zenn",
-    description: "Read my articles on web development and programming",
+    description:
+      "Webアプリ開発とプログラミングに関する私の記事を読むことができます",
     icon: ChartNoAxesColumn,
     url: "https://zenn.dev/tkszenn",
   },
   {
     title: "Email",
-    description: "Get in touch with me directly",
+    description: "直接連絡を取りたい場合は、こちらからどうぞ",
     icon: Mail,
-    url: "negimasa58@gmail.com",
+    url: "/contact/",
   },
 ];
 
@@ -40,10 +40,10 @@ export default function Links() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-3xl mx-auto"
         >
-          <h1 className="text-4xl font-bold mb-8">Connect With Me</h1>
-          <div className="grid gap-6 md:grid-cols-2">
+          <h1 className="text-4xl font-bold mb-8">My Social Links</h1>
+          <div className="grid gap-6 md:grid-cols-1">
             {links.map((link, index) => (
               <motion.div
                 key={link.title}
@@ -52,26 +52,22 @@ export default function Links() {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
               >
                 <Card className="h-full">
-                  <CardHeader>
-                    <div className="flex items-center gap-4">
-                      <link.icon className="h-6 w-6" />
-                      <div>
-                        <CardTitle>{link.title}</CardTitle>
-                        <CardDescription>{link.description}</CardDescription>
+                  <Link
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <CardHeader>
+                      <div className="flex items-center gap-4">
+                        <link.icon className="h-8 w-8 mr-2" />
+                        <div>
+                          <CardTitle>{link.title}</CardTitle>
+                          <div className="mb-2" />
+                          <CardDescription>{link.description}</CardDescription>
+                        </div>
                       </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <Button asChild variant="secondary" className="w-full">
-                      <a
-                        href={link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Visit {link.title}
-                      </a>
-                    </Button>
-                  </CardContent>
+                    </CardHeader>
+                  </Link>
                 </Card>
               </motion.div>
             ))}
