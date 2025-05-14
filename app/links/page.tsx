@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Github, Mail, ChartNoAxesColumn } from "lucide-react";
+import { Github, Mail, ChartNoAxesColumn, Twitter } from "lucide-react";
 import Link from "next/link";
 
 const links = [
@@ -23,6 +23,13 @@ const links = [
       "Webアプリ開発とプログラミングに関する私の記事を読むことができます",
     icon: ChartNoAxesColumn,
     url: "https://zenn.dev/tkszenn",
+  },
+  {
+    title: "X",
+    description:
+      "AIの最新動向やプログラミング技術のアップデート情報をシェアしています",
+    icon: Twitter,
+    url: "https://x.com/p2WJVLYglL25267",
   },
   {
     title: "Email",

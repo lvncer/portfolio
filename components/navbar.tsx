@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Menu, MoonIcon, Rocket, SunIcon, X } from "lucide-react";
 import { Button } from "./ui/button";
@@ -33,8 +32,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* ロゴと名前 */}
         <div className="flex items-center gap-4">
-          <Rocket className="mt-1" />
-          <Link href="/" className="text-2xl font-semibold text-foreground">
+          <Link href="/" className="text-xl font-semibold text-foreground">
             lvncer.dev
           </Link>
         </div>
@@ -51,15 +49,7 @@ export default function Navbar() {
               )}
             >
               {pathname === path && (
-                <motion.div
-                  layoutId="navbar-indicator"
-                  className="absolute inset-0 bg-accent rounded-md z-[-1]"
-                  transition={{
-                    type: "spring",
-                    stiffness: 350,
-                    damping: 30,
-                  }}
-                />
+                <div className="absolute inset-0 bg-accent rounded-md z-[-1]" />
               )}
               {label}
             </Link>

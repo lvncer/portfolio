@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 const certifications = [
   {
@@ -33,11 +34,13 @@ const certifications = [
 
 const experiences = [
   {
+    id: "livefx",
     title: "スマホ向けインタラクティブシステム LiveFx",
-    company: "",
+    company: "SIW実行委員会",
     period: "2025",
+    post: "プロジェクトマネージャー、フロントエンドエンジニア",
     description:
-      "プロジェクトマネージャーとフロントエンドを主に担当しました。入学式プレゼンテーションで観客のスマホでカラフルなアニメーションなどを行い、特に3000台以上のスマホの同期と、リアルタイムでのデータのやり取りを行うために保守性の高いWebSocketを用いたシステム設計を行いました。",
+      "入学式で、観客のスマホでカラフルなアニメーションなどを行いました。3000台以上のスマホの同期と、リアルタイムでのデータのやり取りを行うための工夫にこだわりました。",
     skills: [
       "React",
       "TypeScript",
@@ -51,18 +54,22 @@ const experiences = [
     ],
   },
   {
+    id: "autonomous-driving",
     title: "自動運転AIチャレンジ2024 予選出場",
     company: "自動車技術会",
     period: "2024",
+    post: "プロジェクトマネージャー",
     description:
       "オンラインのシミュレーションで実施します。予選の競技はデジタルツイン指向のAWSIMを用いてコースをより速く走行することを目指します",
     skills: ["ROS", "Ubuntu", "Docker"],
   },
   {
+    id: "drocats",
     title: "第一回ドロカツ プログラミング部門優勝",
     company: "ドロカツ実行委員会",
     period: "2024",
-    description: "ドローンのプログラミングや操縦に関する大会",
+    post: "プロジェクトマネージャー",
+    description: "ドローンのプログラミングや操縦に関する全国大会です。",
     skills: ["Python"],
   },
 ];
@@ -75,72 +82,88 @@ export default function Certifications() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="max-w-4xl mx-auto space-y-12"
+          className="max-w-7xl mx-auto"
         >
-          <section>
-            <h1 className="text-4xl font-bold mb-8">保有している資格</h1>
-            <div className="grid gap-3">
-              {certifications.map((cert, index) => (
-                <motion.div
-                  key={cert.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="flex justify-between items-center">
-                        <span>{cert.title}</span>
-                        <Badge variant="secondary">{cert.date}</Badge>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm text-muted-foreground mb-1">
-                        {cert.organization}
-                      </p>
-                      <p className="text-sm">{cert.description}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </section>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <section>
+              <h1 className="text-4xl font-bold mb-8">保有している資格</h1>
+              <div className="grid gap-3">
+                {certifications.map((cert, index) => (
+                  <motion.div
+                    key={cert.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="flex justify-between items-center">
+                          <span>{cert.title}</span>
+                          <Badge variant="secondary">{cert.date}</Badge>
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-sm text-muted-foreground mb-1">
+                          {cert.organization}
+                        </p>
+                        <p className="text-sm">{cert.description}</p>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            </section>
 
-          <section>
-            <h1 className="text-4xl font-bold mb-8">外部での経験</h1>
-            <div className="grid gap-6">
-              {experiences.map((exp, index) => (
-                <motion.div
-                  key={exp.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="flex justify-between items-center">
-                        <span>{exp.title}</span>
-                        <Badge variant="secondary">{exp.period}</Badge>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm font-medium mb-2">{exp.company}</p>
-                      <p className="text-sm text-muted-foreground mb-4">
-                        {exp.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {exp.skills.map((skill) => (
-                          <Badge key={skill} variant="outline">
-                            {skill}
-                          </Badge>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </section>
+            <section>
+              <h1 className="text-4xl font-bold mb-8">外部での経験</h1>
+              <div className="grid gap-3">
+                {experiences.map((exp, index) => (
+                  <motion.div
+                    key={exp.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <Link
+                      href={`
+                        ${
+                          exp.id === "livefx"
+                            ? "/experiences/livefx"
+                            : "/certifications"
+                        }`}
+                    >
+                      <Card className="transition-all duration-200 hover:shadow-lg hover:scale-[1.02]">
+                        <CardHeader>
+                          <CardTitle className="flex justify-between items-center">
+                            <span>{exp.title}</span>
+                            <Badge variant="secondary">{exp.period}</Badge>
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-sm font-medium mb-1">
+                            運営: {exp.company}
+                          </p>
+                          <p className="text-sm font-medium mb-3">
+                            担当: {exp.post}
+                          </p>
+                          <p className="text-sm text-muted-foreground mb-4">
+                            {exp.description}
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            {exp.skills.map((skill) => (
+                              <Badge key={skill} variant="outline">
+                                {skill}
+                              </Badge>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </section>
+          </div>
         </motion.div>
       </div>
     </div>

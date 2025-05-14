@@ -105,12 +105,7 @@ export default function Home() {
       </div>
 
       <div className="container mx-auto px-4 pt-4 pb-32" id="about">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-4xl mx-auto"
-        >
+        <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-8">About Me</h1>
           <Card>
             <CardContent className="p-6">
@@ -149,7 +144,7 @@ export default function Home() {
               </div>
             </CardContent>
           </Card>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
