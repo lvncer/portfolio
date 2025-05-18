@@ -98,11 +98,13 @@ const skillCategories: SkillCategory[] = [
     icon: Cpu,
     skills: [
       { name: "Linux", startDate: "2023-04-01" },
+      { name: "VSCode", startDate: "2023-04-01" },
       { name: "Git", startDate: "2023-06-01" },
       { name: "AWS", startDate: "2023-09-01" },
       { name: "Figma", startDate: "2024-09-01" },
       { name: "Docker", startDate: "2025-01-01" },
       { name: "CI/CD", startDate: "2025-01-01" },
+      { name: "Cursor Pro", startDate: "2025-05-16" },
     ],
   },
 ];
@@ -138,12 +140,7 @@ export default function Skills(): JSX.Element {
   return (
     <div className="min-h-screen pt-16">
       <div className="container mx-auto px-4 py-24">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-4xl mx-auto"
-        >
+        <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold">Skills</h1>
           <div className="mb-10" />
           <div className="space-y-12">
@@ -152,12 +149,7 @@ export default function Skills(): JSX.Element {
               <p>データを読み込み中...</p>
             ) : (
               monthsData.map((category, categoryIndex) => (
-                <motion.section
-                  key={category.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: categoryIndex * 0.1 }}
-                >
+                <section key={category.title}>
                   <div className="flex items-center gap-3">
                     <category.icon className="w-8 h-8" />
                     <h2 className="text-2xl font-semibold">{category.title}</h2>
@@ -206,11 +198,11 @@ export default function Skills(): JSX.Element {
                       );
                     })}
                   </div>
-                </motion.section>
+                </section>
               ))
             )}
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

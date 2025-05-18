@@ -67,7 +67,7 @@ export default function Projects() {
                 transition={{ delay: index * 0.1 }}
               >
                 <Card>
-                  <CardHeader className="pb-2 text-2xl font-semibold">
+                  <CardHeader className="mb-2 text-2xl font-semibold">
                     <CardTitle>{project.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">

@@ -4,6 +4,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --gradient-start: 78, 84, 200; /* 青紫 */
+  --gradient-end: 143, 86, 216; /* 紫 */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -11,6 +13,8 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --gradient-start: 45, 55, 135; /* 暗い青紫 */
+    --gradient-end: 107, 65, 161; /* 暗い紫 */
   }
 }
 
@@ -41,6 +45,8 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --gradient-bg-light-1: rgba(78, 84, 200, 0.17);
+    --gradient-bg-light-2: rgba(143, 86, 216, 0.17);
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -67,5 +73,52 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --gradient-bg-dark-1: rgba(45, 55, 135, 0.13);
+    --gradient-bg-dark-2: rgba(107, 65, 161, 0.13);
   }
+}
+
+.gradient-bg {
+  background: linear-gradient(
+    135deg,
+    var(--gradient-bg-light-1) 0%,
+    var(--gradient-bg-light-2) 100%
+  );
+}
+
+.dark .gradient-bg {
+  background: linear-gradient(
+      135deg,
+      var(--gradient-bg-dark-1) 0%,
+      var(--gradient-bg-dark-2) 100%
+    ),
+    #0a0a0a;
+}
+
+/* 薄いオーバーレイグラデーション */
+.gradient-overlay {
+  position: relative;
+}
+
+.gradient-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(78, 84, 200, 0.1) 0%,
+    rgba(143, 86, 216, 0.1) 100%
+  );
+  z-index: -1;
+}
+
+.dark .gradient-overlay::before {
+  background: linear-gradient(
+    135deg,
+    rgba(45, 55, 135, 0.3) 0%,
+    rgba(107, 65, 161, 0.3) 100%
+  );
 }
