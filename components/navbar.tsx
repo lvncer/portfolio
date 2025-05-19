@@ -7,6 +7,8 @@ import { Menu, MoonIcon, Rocket, SunIcon, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { useTheme } from "next-themes";
 import { useState } from "react";
+import Image from "next/image";
+import l from "@/public/l.png";
 
 // ナビゲーション項目の定義
 const navItems = [
@@ -32,7 +34,18 @@ export default function Navbar() {
         {/* ロゴと名前 */}
         <div className="flex items-center gap-4">
           <Link href="/" className="text-xl font-semibold text-foreground">
-            lvncer.dev
+            <div className="flex items-center gap-2">
+              <Image
+                src={l}
+                alt="logo"
+                width={32}
+                height={32}
+                className="w-6 h-6 rounded-full"
+              />
+              <span className="-mt-0.5 text-xl font-semibold text-foreground">
+                portfolio
+              </span>
+            </div>
           </Link>
         </div>
 

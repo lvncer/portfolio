@@ -45,8 +45,8 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    --gradient-bg-light-1: rgba(78, 84, 200, 0.17);
-    --gradient-bg-light-2: rgba(143, 86, 216, 0.17);
+    --gradient-bg-light-1: rgba(78, 84, 200, 0.15);
+    --gradient-bg-light-2: rgba(143, 86, 216, 0.15);
   }
   .dark {
     --background: 0 0% 3.9%;
