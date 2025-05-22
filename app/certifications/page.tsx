@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 const certifications = [
   {
@@ -35,23 +37,23 @@ const certifications = [
 const experiences = [
   {
     id: "livefx",
-    title: "スマホ向けインタラクティブシステム LiveFx",
+    title: "LiveFx",
     company: "SIW実行委員会",
     period: "2025",
     post: "プロジェクトマネージャー、フロントエンドエンジニア",
     description:
-      "入学式で、観客のスマホでカラフルなアニメーションなどを行いました。3000台以上のスマホの同期と、リアルタイムでのデータのやり取りを行うための工夫にこだわりました。",
+      "専門学校のグループの入学式イベントで、演者側の MIDI コントローラーによる画面演出の操作を、リアルタイムに観客のスマートフォンへ視覚効果として同期表示させました。",
     skills: [
       "React",
       "TypeScript",
       "WebSocket",
-      "Docker",
       "k8s",
-      "Node.js",
+      "Express",
       "AWS",
       "Prometheus",
       "Grafana",
     ],
+    url: "https://zenn.dev/tkszenn/articles/2e73439f678488",
   },
   {
     id: "autonomous-driving",
@@ -124,41 +126,49 @@ export default function Certifications() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <Link
-                      href={`
-                        ${
-                          exp.id === "livefx"
-                            ? "/experiences/livefx"
-                            : "/certifications"
-                        }`}
-                    >
-                      <Card className="transition-all duration-200 hover:shadow-lg hover:scale-[1.02]">
-                        <CardHeader>
-                          <CardTitle className="flex justify-between items-center">
-                            <span>{exp.title}</span>
-                            <Badge variant="secondary">{exp.period}</Badge>
-                          </CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                          <p className="text-sm font-medium mb-1">
-                            運営: {exp.company}
-                          </p>
-                          <p className="text-sm font-medium mb-3">
-                            担当: {exp.post}
-                          </p>
-                          <p className="text-sm text-muted-foreground mb-4">
-                            {exp.description}
-                          </p>
-                          <div className="flex flex-wrap gap-2">
-                            {exp.skills.map((skill) => (
-                              <Badge key={skill} variant="outline">
-                                {skill}
-                              </Badge>
-                            ))}
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </Link>
+                    <Card className="transition-all duration-200">
+                      <CardHeader>
+                        <CardTitle className="flex justify-between items-center">
+                          <span>{exp.title}</span>
+                          <Badge variant="secondary">{exp.period}</Badge>
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-sm font-medium mb-1">
+                          運営: {exp.company}
+                        </p>
+                        <p className="text-sm font-medium mb-3">
+                          担当: {exp.post}
+                        </p>
+                        <p className="text-sm text-muted-foreground mb-4">
+                          {exp.description}
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          {exp.skills.map((skill) => (
+                            <Badge key={skill} variant="outline">
+                              {skill}
+                            </Badge>
+                          ))}
+                        </div>
+                        {exp.url && (
+                          <>
+                            <div className="mt-4" />
+                            <div className="flex gap-4">
+                              <Button asChild variant="outline" size="sm">
+                                <Link
+                                  href={exp.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <ExternalLink className="w-4 h-4 mr-2" />
+                                  詳細を見る
+                                </Link>
+                              </Button>
+                            </div>
+                          </>
+                        )}
+                      </CardContent>
+                    </Card>
                   </motion.div>
                 ))}
               </div>

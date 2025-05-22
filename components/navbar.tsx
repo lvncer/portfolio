@@ -50,7 +50,7 @@ export default function Navbar() {
         </div>
 
         {/* デスクトップ用ナビゲーション */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-10">
           {navItems.map(({ path, label }) => (
             <Link
               key={path}
