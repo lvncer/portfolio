@@ -10,6 +10,8 @@ import {
   Cpu,
   LucideIcon,
   Star,
+  Calendar,
+  TrendingUp,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -130,6 +132,50 @@ const calculatePercentage = (months: number): number => {
   return percentage;
 };
 
+// スキルカテゴリの色を取得
+const getCategoryColor = (title: string) => {
+  switch (title) {
+    case "プログラミング言語":
+      return "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300";
+    case "フレームワーク":
+      return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300";
+    case "ライブラリ/ツール":
+      return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300";
+    case "データベース":
+      return "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300";
+    case "その他":
+      return "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300";
+    default:
+      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300";
+  }
+};
+
+// 経験レベルに応じた色を取得
+const getExperienceColor = (months: number) => {
+  if (months >= 24) {
+    return "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300"; // 上級（2年以上）
+  } else if (months >= 12) {
+    return "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300"; // 中級（1年以上）
+  } else if (months >= 6) {
+    return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300"; // 初級（6ヶ月以上）
+  } else {
+    return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300"; // 初心者（6ヶ月未満）
+  }
+};
+
+// プログレスバーの色を取得
+const getProgressColor = (months: number) => {
+  if (months >= 24) {
+    return "bg-gradient-to-r from-red-400 to-red-600";
+  } else if (months >= 12) {
+    return "bg-gradient-to-r from-orange-400 to-orange-600";
+  } else if (months >= 6) {
+    return "bg-gradient-to-r from-yellow-400 to-yellow-600";
+  } else {
+    return "bg-gradient-to-r from-gray-400 to-gray-600";
+  }
+};
+
 export default function Skills(): JSX.Element {
   // 現在表示されている経過月数を保持するための状態
   const [monthsData, setMonthsData] = useState<SkillCategoryWithMonths[]>([]);
@@ -156,72 +202,103 @@ export default function Skills(): JSX.Element {
   return (
     <div className="min-h-screen pt-16">
       <div className="container mx-auto px-4 py-24">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold">Skills</h1>
-          <div className="mb-6" />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-6xl mx-auto"
+        >
+          <h1 className="text-4xl font-bold py-6">スキル</h1>
+          <p className="text-muted-foreground mb-8">
+            継続的な学習と実践を通じて習得した技術スキルです。経験年数と自信度に基づいて整理しています。
+          </p>
+
           <div className="space-y-12">
             {isLoading ? (
               // データがロードされるまでの表示
-              <p>データを読み込み中...</p>
+              <div className="flex items-center justify-center py-12">
+                <p className="text-muted-foreground">データを読み込み中...</p>
+              </div>
             ) : (
               monthsData.map((category, categoryIndex) => (
-                <section key={category.title}>
-                  <div className="flex items-center gap-3">
-                    <category.icon className="w-8 h-8" />
+                <motion.section
+                  key={category.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: categoryIndex * 0.1 }}
+                >
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="p-2 rounded-lg bg-accent">
+                      <category.icon className="w-6 h-6" />
+                    </div>
                     <h2 className="text-2xl font-semibold">{category.title}</h2>
+                    <Badge className={getCategoryColor(category.title)}>
+                      {category.skills.length}個
+                    </Badge>
                   </div>
-                  <div className="mb-6" />
-                  <div className="grid gap-4 md:grid-cols-3">
+
+                  <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                     {category.skills.map((skill, skillIndex) => {
                       const percentage = calculatePercentage(skill.months);
                       return (
                         <motion.div
                           key={skill.name}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
                           transition={{
                             delay: categoryIndex * 0.1 + skillIndex * 0.05,
                           }}
                         >
-                          <Card>
+                          <Card className="h-full">
                             <CardHeader>
-                              <div className="flex items-center justify-between">
-                                <CardTitle className="text-xl font-semibold">
+                              <div className="flex items-start justify-between mb-2">
+                                <CardTitle className="text-lg">
                                   {skill.name}
                                 </CardTitle>
-                                {skill.confident && (
-                                  <Badge
-                                    variant="secondary"
-                                    className="flex items-center"
-                                  >
-                                    <Star className="w-3 h-3 fill-current" />
-                                    自信あり
-                                  </Badge>
-                                )}
+                                <div className="flex flex-col gap-1">
+                                  {skill.confident && (
+                                    <Badge
+                                      variant="outline"
+                                      className="flex items-center gap-1 text-xs"
+                                    >
+                                      <Star className="w-3 h-3 fill-current text-yellow-500" />
+                                      自信あり
+                                    </Badge>
+                                  )}
+                                </div>
                               </div>
                             </CardHeader>
-                            <CardContent>
-                              <div className="space-y-4">
-                                <p className="text-sm text-muted-foreground">
-                                  {/* 開始日と経過月数を表示 */}
-                                  <span className="font-medium">開始: </span>
-                                  {new Date(skill.startDate).toLocaleDateString(
-                                    "ja-JP",
-                                    {
-                                      year: "numeric",
-                                      month: "long",
-                                    }
-                                  )}
-                                </p>
-                                <div className="space-y-2">
-                                  <div className="flex justify-between text-sm">
+                            <CardContent className="space-y-4">
+                              <div className="flex items-center text-sm text-muted-foreground">
+                                <Calendar className="w-4 h-4 mr-2" />
+                                開始:{" "}
+                                {new Date(skill.startDate).toLocaleDateString(
+                                  "ja-JP",
+                                  {
+                                    year: "numeric",
+                                    month: "long",
+                                  }
+                                )}
+                              </div>
+
+                              <div className="space-y-2">
+                                <div className="flex items-center justify-between text-sm">
+                                  <div className="flex items-center">
+                                    <TrendingUp className="w-4 h-4 mr-2" />
                                     <span className="font-medium">経験:</span>
-                                    <span>{skill.months}ヶ月</span>
                                   </div>
-                                  {/* カスタムプログレスバー */}
-                                  <div className="h-2 w-full rounded-full overflow-hidden relative">
+                                  <span className="font-semibold">
+                                    {skill.months}ヶ月
+                                  </span>
+                                </div>
+
+                                {/* カスタムプログレスバー */}
+                                <div className="space-y-1">
+                                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                                     <div
-                                      className="bg-gray-400 absolute top-0 left-0 h-full rounded-full"
+                                      className={`h-full rounded-full transition-all duration-500 ${getProgressColor(
+                                        skill.months
+                                      )}`}
                                       style={{ width: `${percentage}%` }}
                                     />
                                   </div>
@@ -239,11 +316,11 @@ export default function Skills(): JSX.Element {
                       );
                     })}
                   </div>
-                </section>
+                </motion.section>
               ))
             )}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
