@@ -12,7 +12,8 @@ const features: FeatureItem[] = [
   {
     icon: Code2,
     title: "高い志向性",
-    description: "常に最高品質を目指し、洗練されたコードと成果物を提供します。",
+    description:
+      "常に最高品質を目指し、洗練されたコードと成果物を迅速に提供します。",
   },
   {
     icon: Sparkles,

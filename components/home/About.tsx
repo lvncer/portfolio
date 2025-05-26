@@ -61,12 +61,6 @@ export const About = () => {
                       AI関連の最新技術を探求したり、OSSのプロジェクトに貢献したり、開発者コミュニティと知識を共有したりしています。
                     </p>
                   </div>
-                  <div className="space-y-2">
-                    <h3 className="text-lg font-semibold">趣味に関すること</h3>
-                    <p className="text-muted-foreground">
-                      アート、ガジェット、ゲームなど
-                    </p>
-                  </div>
                 </div>
               </div>
             </CardContent>

@@ -12,7 +12,7 @@ const projects = [
   {
     title: "LightningTalks",
     description:
-      "Next.Js、Clerk、Neonを使用したライトニングトーク登録サイト。もともと、学校でLTを行いたいという意見が多かったため作成。学校の学生だけでなく、外部のユーザも登録可能。",
+      "ライトニングトーク管理サイト。学校でLTを行いたいという意見が多かったため作成しました。学校の学生だけでなく、外部のユーザも登録可能です。",
     image: "/lt.png",
     technologies: ["Next.Js", "TypeScript", "Neon", "Clerk"],
     category: "Webアプリケーション",
@@ -24,7 +24,7 @@ const projects = [
   {
     title: "Bookmarks",
     description:
-      "Next.Js、Clerk、Supabaseを使用したシンプルなブックマークマネージャー。Clerkによるユーザ認証とSupabaseの高速データベースにより、快適な操作性を実現。",
+      "シンプルなブックマークマネージャー。カテゴリ別にブックマークを管理できます。",
     image: "/bookmark.png",
     technologies: ["Next.Js", "TypeScript", "Supabase", "Clerk"],
     category: "Webアプリケーション",
@@ -36,16 +36,15 @@ const projects = [
   {
     title: "Next SNS",
     description:
-      "Next.jsとNode.Jsを使用したモダンなSNSサイト。MongoDBと連携したAPIサーバーを間に挟むことで高い保守性が保たれる。",
+      "シンプルなSNSのクローンサイト。フルスタックで作成した初めてのWebアプリです。",
     image: "/nextsns.png",
     technologies: [
       "Next.js",
       "TypeScript",
       "Node.Js",
-      "Tailwind CSS",
-      "ShadCn",
+      "Express",
       "Redux",
-      "Vitest",
+      "Tailwind CSS",
       "MongoDB",
     ],
     category: "Webアプリケーション",
@@ -88,7 +87,7 @@ const getCategoryColor = (category: string) => {
 
 export default function Projects() {
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen">
       <div className="container mx-auto px-4 py-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -101,7 +100,7 @@ export default function Projects() {
             Web開発を中心とした様々なプロジェクトを手がけ、モダンな技術スタックを活用してユーザー体験の向上を目指しています。
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}

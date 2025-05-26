@@ -78,6 +78,7 @@ const skillCategories: SkillCategory[] = [
       { name: "Express.js", startDate: "2024-04-01", confident: true },
       { name: "Redux", startDate: "2024-04-01" },
       { name: "TailwindCSS", startDate: "2024-06-01", confident: true },
+      { name: "Laravel", startDate: "2025-05-18" },
     ],
   },
   {
@@ -104,7 +105,7 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "その他",
+    title: "ツール",
     icon: Cpu,
     skills: [
       { name: "Linux", startDate: "2023-04-01", confident: true },
@@ -113,9 +114,18 @@ const skillCategories: SkillCategory[] = [
       { name: "AWS", startDate: "2023-09-01" },
       { name: "Figma", startDate: "2024-09-01" },
       { name: "Docker", startDate: "2025-01-01" },
-      { name: "CI/CD", startDate: "2025-01-01" },
+      { name: "GitHub Actions", startDate: "2025-01-01" },
       { name: "Cursor Pro", startDate: "2025-05-16" },
       { name: "Google AI Pro", startDate: "2025-05-21" },
+    ],
+  },
+  {
+    title: "その他",
+    icon: Cpu,
+    skills: [
+      { name: "アジャイル開発", startDate: "2023-09-01", confident: true },
+      { name: "AI 駆動開発", startDate: "2025-04-01", confident: true },
+      { name: "テスト駆動開発", startDate: "2025-05-26" },
     ],
   },
 ];
@@ -147,19 +157,6 @@ const getCategoryColor = (title: string) => {
       return "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300";
     default:
       return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300";
-  }
-};
-
-// 経験レベルに応じた色を取得
-const getExperienceColor = (months: number) => {
-  if (months >= 24) {
-    return "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300"; // 上級（2年以上）
-  } else if (months >= 12) {
-    return "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300"; // 中級（1年以上）
-  } else if (months >= 6) {
-    return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300"; // 初級（6ヶ月以上）
-  } else {
-    return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300"; // 初心者（6ヶ月未満）
   }
 };
 
@@ -200,7 +197,7 @@ export default function Skills(): JSX.Element {
   }, []);
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen">
       <div className="container mx-auto px-4 py-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -251,14 +248,14 @@ export default function Skills(): JSX.Element {
                         >
                           <Card className="h-full">
                             <CardHeader>
-                              <div className="flex items-start justify-between mb-2">
-                                <CardTitle className="text-lg">
+                              <div className="flex items-start justify-between">
+                                <CardTitle className="text-xl">
                                   {skill.name}
                                 </CardTitle>
                                 <div className="flex flex-col gap-1">
                                   {skill.confident && (
                                     <Badge
-                                      variant="outline"
+                                      variant="secondary"
                                       className="flex items-center gap-1 text-xs"
                                     >
                                       <Star className="w-3 h-3 fill-current text-yellow-500" />
@@ -269,23 +266,11 @@ export default function Skills(): JSX.Element {
                               </div>
                             </CardHeader>
                             <CardContent className="space-y-4">
-                              <div className="flex items-center text-sm text-muted-foreground">
-                                <Calendar className="w-4 h-4 mr-2" />
-                                開始:{" "}
-                                {new Date(skill.startDate).toLocaleDateString(
-                                  "ja-JP",
-                                  {
-                                    year: "numeric",
-                                    month: "long",
-                                  }
-                                )}
-                              </div>
-
                               <div className="space-y-2">
                                 <div className="flex items-center justify-between text-sm">
                                   <div className="flex items-center">
                                     <TrendingUp className="w-4 h-4 mr-2" />
-                                    <span className="font-medium">経験:</span>
+                                    <span className="font-medium">経験</span>
                                   </div>
                                   <span className="font-semibold">
                                     {skill.months}ヶ月
