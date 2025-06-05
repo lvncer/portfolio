@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-center md:text-left">
               <p className="text-sm text-muted-foreground font-light">
-                © 2025 lvncer. Crafted for the future.
+                © 2025 lvncer.
               </p>
             </div>
 
@@ -32,13 +32,6 @@ export default function Footer() {
                   <Github className="h-6 w-6 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
                 </div>
               </Link>
-
-              <div className="text-muted-foreground font-light text-sm">
-                <span className="hidden sm:inline">
-                  Made with Next.js & Tailwind
-                </span>
-                <span className="sm:hidden">Next.js & Tailwind</span>
-              </div>
             </div>
           </div>
 

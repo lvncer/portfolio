@@ -7,15 +7,15 @@ import { AnimatedElement } from "@/components/ui/animated-element";
 const ProfileImage = () => {
   return (
     <div className="relative group">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/15 to-purple-500/15 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-700" />
-      <div className="relative aspect-square w-full overflow-hidden rounded-3xl bg-white/10 backdrop-blur-sm p-2">
+      <div className="absolute inset-0 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-700" />
+      <div className="relative aspect-square w-full overflow-hidden rounded-3xl backdrop-blur-sm p-2">
         <div className="relative w-full h-full rounded-2xl overflow-hidden">
           <Image
             src={myimg}
             alt="Profile"
             className="object-cover group-hover:scale-105 transition-transform duration-700"
             fill
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="(max-width: 500px) 100vw, 25vw"
             priority
           />
         </div>
@@ -26,7 +26,7 @@ const ProfileImage = () => {
 
 export const About = () => {
   return (
-    <div className="relative py-32 overflow-hidden" id="about">
+    <div className="relative py-48 overflow-hidden" id="about">
       {/* Subtle overlay */}
       <div className="absolute inset-0 bg-black/10" />
 
@@ -35,7 +35,7 @@ export const About = () => {
       <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-purple-500/3 rounded-full blur-3xl" />
 
       <div className="relative z-10 container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <AnimatedElement delay={0.2} className="text-center mb-20">
             <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white mb-4">
               ABOUT
@@ -57,29 +57,18 @@ export const About = () => {
               <div className="order-1 lg:order-2 space-y-8">
                 <div className="space-y-6">
                   <h2 className="text-3xl md:text-4xl font-bold text-white">
-                    Hello, I'm{" "}
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-                      Takahashi
-                    </span>
+                    Hello, I'm Takahashi
                   </h2>
 
                   <div className="space-y-4 text-gray-200">
                     <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full" />
                       <span className="font-light">
                         Student at Saitama IT & Web College
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full" />
                       <span className="font-light">
                         Advanced Information Technology (3rd year)
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-violet-500 rounded-full" />
-                      <span className="font-light">
-                        Known as "lvncer" online
                       </span>
                     </div>
                   </div>

@@ -63,7 +63,7 @@ const links: LinkItem[] = [
 
 export const SocialLinks = () => {
   return (
-    <div className="relative py-32 overflow-hidden" id="links">
+    <div className="relative py-40 overflow-hidden" id="links">
       {/* Subtle overlay */}
       <div className="absolute inset-0 bg-black/10" />
 
@@ -72,7 +72,7 @@ export const SocialLinks = () => {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/3 rounded-full blur-3xl" />
 
       <div className="relative z-10 container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           <AnimatedElement delay={0.2} className="text-center mb-20">
             <h1 className="text-5xl md:text-6xl font-black tracking-tighter text-white mb-4">
               CONNECT
@@ -83,7 +83,7 @@ export const SocialLinks = () => {
           </AnimatedElement>
 
           <LazyLoad>
-            <div className="grid gap-4 md:gap-6">
+            <div className="grid gap-1 md:gap-2">
               {links.map((link, index) => (
                 <AnimatedElement
                   key={link.title}
@@ -95,7 +95,7 @@ export const SocialLinks = () => {
                       className={`absolute inset-0 bg-gradient-to-r ${link.color} opacity-0 group-hover:opacity-10 rounded-2xl blur-xl transition-all duration-700`}
                     />
 
-                    <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-2 md:p-4 group-hover:bg-white/15 transition-all duration-500">
+                    <div className="relative bg-black/50 backdrop-blur-sm rounded-2xl p-2 md:p-4 group-hover:bg-black transition-all duration-500">
                       <div className="flex items-center gap-6">
                         <div className="relative">
                           <div

@@ -34,9 +34,6 @@ export const Hero = () => {
             <p className="text-lg md:text-xl text-gray-200 font-light leading-relaxed">
               Building digital experiences that matter.
             </p>
-            <p className="text-sm md:text-base text-gray-300 mt-2">
-              美しく機能的なソリューションを創造
-            </p>
           </AnimatedElement>
 
           <AnimatedElement

@@ -4,7 +4,6 @@ import { AnimatedElement } from "@/components/ui/animated-element";
 type FeatureItem = {
   icon: LucideIcon;
   title: string;
-  subtitle: string;
   description: string;
 };
 
@@ -12,19 +11,16 @@ const features: FeatureItem[] = [
   {
     icon: Code2,
     title: "CRAFT",
-    subtitle: "精密性",
     description: "Clean code, perfect execution",
   },
   {
     icon: Sparkles,
     title: "INNOVATE",
-    subtitle: "革新性",
     description: "Creative solutions, lasting impact",
   },
   {
     icon: Rocket,
     title: "DELIVER",
-    subtitle: "実現力",
     description: "Fast results, exceptional quality",
   },
 ];
@@ -54,7 +50,7 @@ export const Features = () => {
                 {/* Icon container */}
                 <div className="relative mx-auto w-24 h-24 mb-8 flex items-center justify-center">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/15 to-purple-500/15 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-700" />
-                  <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 group-hover:scale-110 transition-all duration-500">
+                  <div className="relative bg-black/50 backdrop-blur-sm rounded-2xl p-6 group-hover:scale-110 transition-all duration-500">
                     <feature.icon className="h-12 w-12 text-white" />
                   </div>
                 </div>
@@ -64,9 +60,6 @@ export const Features = () => {
                   <h3 className="text-3xl md:text-4xl font-black tracking-tighter text-white">
                     {feature.title}
                   </h3>
-                  <p className="text-lg text-gray-300 font-light">
-                    {feature.subtitle}
-                  </p>
                   <p className="text-gray-200 font-light leading-relaxed max-w-xs mx-auto">
                     {feature.description}
                   </p>
