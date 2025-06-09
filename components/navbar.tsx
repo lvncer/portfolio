@@ -14,8 +14,10 @@ import l from "@/public/l.png";
 const navItems = [
   { path: "/", label: "Home" },
   { path: "/skills", label: "Skills" },
-  { path: "/certifications", label: "Experience" },
+  { path: "/certifications", label: "Cert" },
+  { path: "/experiences", label: "Experience" },
   { path: "/projects", label: "Projects" },
+  { path: "/events", label: "Events" },
 ];
 
 export default function Navbar() {
