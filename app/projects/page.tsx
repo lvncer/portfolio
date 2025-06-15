@@ -10,13 +10,49 @@ import Link from "next/link";
 
 const projects = [
   {
+    title: "Echoes",
+    description:
+      "AIの3Dモデルと直接会話ができるWebアプリ。音声入力から認識・合成・出力までできます。",
+    image: "/echoes.png",
+    technologies: [
+      "Next.Js",
+      "TypeScript",
+      "React Three Fiber",
+      "Zustand",
+      "Gemini",
+    ],
+    category: "Webアプリケーション",
+    status: "開発中",
+    year: "2025",
+    github: "https://github.com/lvncer/echoes",
+  },
+  {
+    title: "NameCard",
+    description:
+      "Markdown ファイルから美しい名刺を作成・エクスポートできる CLI ツール",
+    image: "/name-card.png",
+    technologies: [
+      "Next.Js",
+      "TypeScript",
+      "NPM",
+      "Commander",
+      "Tailwind CSS",
+      "Puppeteer",
+    ],
+    category: "ライブラリ",
+    status: "開発中",
+    year: "2025",
+    github: "https://github.com/lvncer/name-card",
+    live: "https://www.npmjs.com/package/@lvncer/name-card",
+  },
+  {
     title: "LightningTalks",
     description:
       "ライトニングトーク管理サイト。学校でLTを行いたいという意見が多かったため作成しました。学校の学生だけでなく、外部のユーザも登録可能です。",
     image: "/lt.png",
     technologies: ["Next.Js", "TypeScript", "Neon", "Clerk"],
     category: "Webアプリケーション",
-    status: "開発中",
+    status: "公開中",
     year: "2025",
     github: "https://github.com/lvncer/lt",
     live: "https://siw-lt.vercel.app",

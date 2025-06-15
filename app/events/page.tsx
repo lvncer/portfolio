@@ -9,6 +9,20 @@ import { ExternalLink, Building, Calendar, MapPin, Users } from "lucide-react";
 
 const events = [
   {
+    id: "siw-lt-2",
+    title: "SIW LT会 第二回",
+    date: "2025/06/30",
+    location: "さいたまIT・WEB専門学校",
+    organizer: "SIW LT委員会",
+    role: "LT登壇",
+    category: "学校イベント",
+    status: "開催予定",
+    description: "AI駆動開発の最先端についてLTを行います。",
+    technologies: ["AI", "LLM", "Gemini", "Claude Code"],
+    attendees: "約10名",
+    url: "https://siw-lt.vercel.app/talk/18",
+  },
+  {
     id: "siw-lt-1",
     title: "SIW LT会 第一回",
     date: "2025/05/30",
