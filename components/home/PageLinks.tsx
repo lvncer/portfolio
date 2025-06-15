@@ -6,38 +6,33 @@ const pageLinks = [
   {
     href: "/skills",
     title: "Skills",
-    description: "技術スタック",
     icon: Code2,
   },
   {
     href: "/projects",
     title: "Projects",
-    description: "制作物",
     icon: FolderOpen,
   },
   {
     href: "/certifications",
     title: "Certifications",
-    description: "保有資格",
     icon: Award,
   },
   {
     href: "/experiences",
     title: "Experiences",
-    description: "外部経験",
     icon: Briefcase,
   },
   {
     href: "/events",
     title: "Events",
-    description: "イベント・活動",
     icon: Calendar,
   },
 ];
 
 export const PageLinks = () => {
   return (
-    <div className="relative py-24 overflow-hidden">
+    <div className="relative py-32 overflow-hidden">
       {/* Subtle overlay */}
       <div className="absolute inset-0 bg-black/5" />
 
@@ -70,9 +65,6 @@ export const PageLinks = () => {
                     <h3 className="text-lg font-semibold tracking-tight text-white group-hover:text-blue-200 transition-colors duration-300">
                       {link.title}
                     </h3>
-                    <p className="text-xs text-gray-300/80 font-light">
-                      {link.description}
-                    </p>
                   </div>
 
                   {/* Hover effect line */}

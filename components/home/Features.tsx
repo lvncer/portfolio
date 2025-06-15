@@ -27,7 +27,7 @@ const features: FeatureItem[] = [
 
 export const Features = () => {
   return (
-    <div className="relative py-32 overflow-hidden">
+    <div id="features" className="relative pt-64 overflow-hidden">
       {/* Subtle overlay */}
       <div className="absolute inset-0 bg-black/10" />
 
