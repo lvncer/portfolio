@@ -3,7 +3,6 @@
 import { Hero } from "@/components/home/Hero";
 import { Features } from "@/components/home/Features";
 import { PageLinks } from "@/components/home/PageLinks";
-import { CompanyLogos } from "@/components/home/CompanyLogos";
 import { About } from "@/components/home/About";
 import { SocialLinks } from "@/components/home/SocialLinks";
 import Squares from "@/components/Squares";

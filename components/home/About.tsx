@@ -1,5 +1,5 @@
 import Image from "next/image";
-import myimg from "@/public/profile.png";
+import myimg from "@/public/anime-profile.png";
 import { LazyLoad } from "@/components/ui/lazy-load";
 import { AnimatedElement } from "@/components/ui/animated-element";
 
@@ -8,14 +8,14 @@ const ProfileImage = () => {
   return (
     <div className="relative group">
       <div className="absolute inset-0 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-700" />
-      <div className="relative aspect-square w-full overflow-hidden rounded-3xl backdrop-blur-sm p-2">
-        <div className="relative w-full h-full rounded-2xl overflow-hidden">
+      <div className="relative aspect-square w-full overflow-hidden rounded-3xl p-2">
+        <div className="relative w-full h-full rounded-full overflow-hidden">
           <Image
             src={myimg}
             alt="Profile"
-            className="object-cover group-hover:scale-105 transition-transform duration-700"
+            className="object-cover group-hover:scale-110 transition-transform duration-700"
             fill
-            sizes="(max-width: 500px) 100vw, 25vw"
+            sizes="100vw, 100vw"
             priority
           />
         </div>
@@ -35,7 +35,7 @@ export const About = () => {
       <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-purple-500/3 rounded-full blur-3xl" />
 
       <div className="relative z-10 container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <AnimatedElement delay={0.2} className="text-center mb-20">
             <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white mb-4">
               ABOUT
@@ -74,22 +74,15 @@ export const About = () => {
                   </div>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-4">
                   <div className="space-y-3">
-                    <h3 className="text-xl font-semibold text-white flex items-center gap-2">
-                      <span className="text-blue-400">EXPERIENCE</span>
-                    </h3>
                     <p className="text-gray-200 font-light leading-relaxed">
                       Building web apps & systems with passionate teams
                     </p>
                   </div>
-
                   <div className="space-y-3">
-                    <h3 className="text-xl font-semibold text-white flex items-center gap-2">
-                      <span className="text-purple-400">INTERESTS</span>
-                    </h3>
                     <p className="text-gray-200 font-light leading-relaxed">
-                      AI tech exploration, OSS contributions, dev community
+                      AI tech exploration / OSS contributions / dev community
                     </p>
                   </div>
                 </div>
