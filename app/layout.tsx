@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/navbar";
+import Squares from "@/components/Squares";
 import Footer from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -25,11 +26,21 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <div className="min-h-screen bg-background gradient-bg">
+          <div className="relative z-10 min-h-screen bg-background gradient-bg">
+            {/* Global animated grid background */}
+            <div className="fixed inset-0 -z-10 pointer-events-none">
+              <Squares
+                speed={0.2}
+                squareSize={40}
+                direction="diagonal"
+                borderColor="#ccc"
+                hoverFillColor={undefined}
+              />
+            </div>
             <Navbar />
             <main>{children}</main>
             <Footer />

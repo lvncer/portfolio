@@ -52,6 +52,7 @@ const experiences = [
     status: "優勝",
     description: "ドローンのプログラミングや操縦に関する全国大会です。",
     skills: ["Python"],
+    url: "https://www.drokatsu.com/news/drokatsutaikai-zenkoku",
   },
 ];
 

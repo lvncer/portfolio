@@ -54,13 +54,7 @@ const companies = [
   },
 ];
 
-const LogoItem = ({
-  company,
-  index,
-}: {
-  company: (typeof companies)[0];
-  index: number;
-}) => (
+const LogoItem = ({ company }: { company: (typeof companies)[0] }) => (
   <div className="flex items-center justify-center min-w-[280px] h-16 px-6 flex-shrink-0">
     {company.type === "image" && (
       <div className="relative w-full h-full flex items-center justify-center">
@@ -114,14 +108,14 @@ export const CompanyLogos = () => {
               <LogoItem
                 key={`first-${company.name}-${index}`}
                 company={company}
-                index={index}
+               
               />
             ))}
             {companies.map((company, index) => (
               <LogoItem
                 key={`second-${company.name}-${index}`}
                 company={company}
-                index={index}
+               
               />
             ))}
           </div>

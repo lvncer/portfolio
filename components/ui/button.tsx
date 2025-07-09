@@ -37,7 +37,7 @@ const buttonVariants = cva(
 
 // Button コンポーネント本体
 const Button = React.forwardRef<
-  HTMLElement,
+  HTMLButtonElement,
   React.ComponentPropsWithRef<"button"> &
     VariantProps<typeof buttonVariants> & { asChild?: boolean }
 >(({ className, variant, size, asChild = false, ...props }, ref) => {
@@ -45,7 +45,7 @@ const Button = React.forwardRef<
 
   return (
     <Comp
-      ref={ref as any} // ここで ref を any にして型の衝突を回避
+      ref={ref}
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}

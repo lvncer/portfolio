@@ -87,6 +87,8 @@ const skillCategories: SkillCategory[] = [
       { name: "Cursor Pro" },
       { name: "Google AI Pro" },
       { name: "Claude Code" },
+      { name: "Windsurf" },
+      { name: "Devin" },
     ],
   },
   {
@@ -107,13 +109,13 @@ export default function Skills(): JSX.Element {
       <div className="container mx-auto px-4 py-24">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl font-bold py-6">Skills</h1>
-          <p className="text-muted-foreground mb-12">
+          <p className="text-white mb-12">
             Skills I have learned and practiced through continuous learning and
             practice.
           </p>
 
           <div className="space-y-8">
-            {skillCategories.map((category, categoryIndex) => (
+            {skillCategories.map((category) => (
               <section key={category.title} className="space-y-6">
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-lg bg-accent">
@@ -123,9 +125,9 @@ export default function Skills(): JSX.Element {
                 </div>
 
                 <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                  {category.skills.map((skill, skillIndex) => (
+                  {category.skills.map((skill) => (
                     <div key={skill.name} className="group">
-                      <div className="px-4 py-3 rounded-lg border bg-background/50 backdrop-blur-sm hover:bg-accent/50 transition-all duration-300 hover:shadow-md hover:scale-105">
+                      <div className="px-4 py-3 rounded-lg border bg-black hover:bg-accent/50 transition-all duration-300 hover:shadow-md hover:scale-105">
                         <span className="text-sm font-medium text-foreground group-hover:text-accent-foreground">
                           {skill.name}
                         </span>

@@ -13,7 +13,7 @@ const projects = [
     title: "Echoes",
     description:
       "AIの3Dモデルと直接会話ができるWebアプリ。音声入力から認識・合成・出力までできます。",
-    image: "/echoes.png",
+    image: "https://github.com/lvncer/echoes/raw/main/public/images/echoes-top.jpeg",
     technologies: [
       "Next.Js",
       "TypeScript",

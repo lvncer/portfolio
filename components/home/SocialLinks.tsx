@@ -115,7 +115,7 @@ export const SocialLinks = () => {
                 Connect
               </h1>
               <p className="text-xl md:text-2xl text-gray-200 font-light leading-relaxed max-w-lg">
-                Let's build something amazing together.
+                Let&apos;s build something amazing together.
               </p>
             </div>
           </AnimatedElement>

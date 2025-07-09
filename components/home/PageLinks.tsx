@@ -54,8 +54,8 @@ export const PageLinks = () => {
                 <div className="relative">
                   {/* Icon container */}
                   <div className="relative mx-auto w-16 h-16 mb-4 flex items-center justify-center">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl blur-lg group-hover:blur-xl transition-all duration-500" />
-                    <div className="relative bg-black/30 backdrop-blur-sm rounded-xl p-3 group-hover:bg-black/40 transition-all duration-300">
+                    <div className="absolute inset-0 group-hover:blur-xl transition-all duration-500" />
+                    <div className="relative p-3 group-hover:bg-black/40 transition-all duration-300">
                       <link.icon className="h-8 w-8 text-white/80 group-hover:text-white transition-colors duration-300" />
                     </div>
                   </div>

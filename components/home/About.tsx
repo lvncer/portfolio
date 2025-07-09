@@ -1,5 +1,5 @@
 import Image from "next/image";
-import myimg from "@/public/anime-profile.png";
+import myimg from "@/public/profile.jpeg";
 import { LazyLoad } from "@/components/ui/lazy-load";
 import { AnimatedElement } from "@/components/ui/animated-element";
 
@@ -57,7 +57,7 @@ export const About = () => {
               <div className="order-1 lg:order-2 space-y-8">
                 <div className="space-y-6">
                   <h2 className="text-3xl md:text-4xl font-bold text-white">
-                    Hello, I'm Takahashi
+                    Hello, I&apos;m Takahashi
                   </h2>
 
                   <div className="space-y-4 text-gray-200">
@@ -89,7 +89,7 @@ export const About = () => {
 
                 <div className="pt-4">
                   <p className="text-lg text-gray-300 font-light italic">
-                    "Aspiring fullstack engineer"
+                    &quot;Aspiring fullstack engineer&quot;
                   </p>
                 </div>
               </div>
