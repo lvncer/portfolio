@@ -10,10 +10,23 @@ import Link from "next/link";
 
 const projects = [
   {
+    title: "cclog",
+    description:
+      "Claude Code の会話履歴をコマンドライン上で効率的に閲覧・管理するためのツール。過去のセッションを簡単に検索、閲覧、再開できます。",
+    image:
+      "https://raw.githubusercontent.com/lvncer/cclog/HEAD/public/images/sessions-preview.jpeg",
+    technologies: ["TypeScript"],
+    category: "ツール",
+    status: "公開中",
+    year: "2025",
+    github: "https://github.com/lvncer/echoes",
+    live: "https://www.npmjs.com/package/@lvncer/cclog",
+  },
+  {
     title: "Echoes",
     description:
       "AIの3Dモデルと直接会話ができるWebアプリ。音声入力から認識・合成・出力までできます。",
-    image: "https://github.com/lvncer/echoes/raw/main/public/images/echoes-top.jpeg",
+    image: "/echoes.jpeg",
     technologies: [
       "Next.Js",
       "TypeScript",
@@ -22,15 +35,16 @@ const projects = [
       "Gemini",
     ],
     category: "Webアプリケーション",
-    status: "開発中",
+    status: "公開中",
     year: "2025",
     github: "https://github.com/lvncer/echoes",
+    live: "https://echoes-livid.vercel.app/",
   },
   {
     title: "NameCard",
     description:
       "Markdown ファイルから美しい名刺を作成・エクスポートできる CLI ツール",
-    image: "/name-card.png",
+    image: "./name-card.jpg",
     technologies: [
       "Next.Js",
       "TypeScript",
@@ -40,7 +54,7 @@ const projects = [
       "Puppeteer",
     ],
     category: "ライブラリ",
-    status: "開発中",
+    status: "公開中",
     year: "2025",
     github: "https://github.com/lvncer/name-card",
     live: "https://www.npmjs.com/package/@lvncer/name-card",
