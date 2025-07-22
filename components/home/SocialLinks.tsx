@@ -5,6 +5,7 @@ import {
   Twitter,
   LucideIcon,
   Globe,
+  Speaker,
 } from "lucide-react";
 import { AnimatedElement } from "@/components/ui/animated-element";
 import { ArrowRight } from "lucide-react";
@@ -33,6 +34,13 @@ const links: LinkItem[] = [
     isExternalLink: true,
   },
   {
+    title: "Speaker Deck",
+    description: "Tech presentations",
+    icon: Speaker,
+    url: "https://speakerdeck.com/lvncer",
+    isExternalLink: true,
+  },
+  {
     title: "Connpass",
     description: "Event participation records",
     icon: Globe,
@@ -50,8 +58,8 @@ const links: LinkItem[] = [
     title: "Email",
     description: "Direct contact for collaboration",
     icon: Mail,
-    url: "",
-    isExternalLink: false,
+    url: "mailto:hi@lvncer.dev",
+    isExternalLink: true,
   },
 ];
 
