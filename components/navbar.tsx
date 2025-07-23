@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-black/20 dark:bg-black/20 backdrop-blur-xl border-b border-white/10 dark:border-white/10">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+      <div className="container mx-auto px-4 md:px-12 h-16 flex items-center justify-between">
         {/* ロゴと名前 */}
         <div className="flex items-center gap-4">
           <Link
@@ -36,19 +36,18 @@ export default function Navbar() {
             className="group flex items-center gap-3 transition-all duration-300 hover:scale-105"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-full blur-lg group-hover:blur-xl transition-all duration-500" />
-              <div className="relative bg-white/10 dark:bg-white/10 backdrop-blur-sm rounded-full p-1">
+              <div className="relative bg-white/10 dark:bg-white/10 backdrop-blur-sm rounded-full">
                 <Image
                   src={l}
                   alt="logo"
                   width={24}
                   height={24}
-                  className="w-6 h-6 rounded-full"
+                  className="w-8 h-8 rounded-full"
                 />
               </div>
             </div>
-            <span className="text-xl font-black tracking-tight text-foreground group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-foreground group-hover:to-muted-foreground transition-all duration-500">
-              PORTFOLIO
+            <span className="text-xl font-medium tracking-tight text-foreground group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-foreground group-hover:to-muted-foreground transition-all duration-500">
+              portfolio
             </span>
           </Link>
         </div>

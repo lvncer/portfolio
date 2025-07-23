@@ -37,8 +37,8 @@ export const About = () => {
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <AnimatedElement delay={0.2} className="text-center mb-20">
-            <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white mb-4">
-              ABOUT
+            <h1 className="text-5xl md:text-7xl font-medium tracking-tighter text-white mb-4">
+              About
             </h1>
             <p className="text-xl text-gray-300 font-light">
               Who I am & what I do
@@ -56,7 +56,7 @@ export const About = () => {
 
               <div className="order-1 lg:order-2 space-y-8">
                 <div className="space-y-6">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white">
+                  <h2 className="text-3xl md:text-4xl font-medium text-white">
                     Hello, I&apos;m Takahashi
                   </h2>
 

@@ -33,7 +33,7 @@ export default function Footer() {
           {/* Bottom accent line */}
           <div className="mt-8 pt-6 border-t border-border/40">
             <div className="text-center">
-              <p className="text-xs text-muted-foreground/70 font-light tracking-wider uppercase">
+              <p className="text-xs text-muted-foreground/70 font-light tracking-wider">
                 Creating digital experiences that inspire
               </p>
             </div>

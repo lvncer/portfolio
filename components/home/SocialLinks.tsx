@@ -119,10 +119,10 @@ export const SocialLinks = () => {
           {/* Left side - Simple text */}
           <AnimatedElement delay={0.2} className="space-y-6">
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl font-black tracking-tighter text-white">
+              <h1 className="text-5xl md:text-6xl font-medium tracking-tighter text-white">
                 Connect
               </h1>
-              <p className="text-xl md:text-2xl text-gray-200 font-light leading-relaxed max-w-lg">
+              <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-lg">
                 Let&apos;s build something amazing together.
               </p>
             </div>

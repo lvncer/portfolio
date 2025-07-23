@@ -14,11 +14,11 @@ export const Hero = () => {
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-24 items-center">
           {/* Left side - Text content */}
           <AnimatedElement delay={0.2} className="space-y-6">
-            <div className="space-y-4">
+            <div className="space-y-6">
               <h1 className="text-5xl md:text-6xl font-medium tracking-tighter text-white">
                 System Developer
               </h1>
-              <p className="text-md md:text-xl text-gray-200 font-light leading-relaxed max-w-lg">
+              <p className="text-md md:text-xl text-gray-300 font-light leading-relaxed max-w-lg">
                 Building reliable systems through clean code and thoughtful
                 design.
               </p>
