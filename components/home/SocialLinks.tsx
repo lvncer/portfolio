@@ -49,9 +49,9 @@ const links: LinkItem[] = [
   },
   {
     title: "X",
-    description: "AI trends & tech updates",
+    description: "AI trends & Tech updates",
     icon: Twitter,
-    url: "https://x.com/p2WJVLYglL25267",
+    url: "https://x.com/kihhi_",
     isExternalLink: true,
   },
   {
