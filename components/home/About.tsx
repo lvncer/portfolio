@@ -6,7 +6,7 @@ import { AnimatedElement } from "@/components/ui/animated-element";
 // プロフィール画像を最適化するコンポーネント
 const ProfileImage = () => {
   return (
-    <div className="relative group">
+    <div className="relative group w-full">
       <div className="absolute inset-0 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-700" />
       <div className="relative aspect-square w-full overflow-hidden rounded-3xl p-2">
         <div className="relative w-full h-full rounded-full overflow-hidden">
@@ -15,7 +15,7 @@ const ProfileImage = () => {
             alt="Profile"
             className="object-cover group-hover:scale-110 transition-transform duration-700"
             fill
-            sizes="100vw, 100vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
           />
         </div>
@@ -48,13 +48,13 @@ export const About = () => {
           <LazyLoad>
             <AnimatedElement
               delay={0.4}
-              className="grid lg:grid-cols-2 gap-16 items-center"
+              className="flex flex-col lg:grid lg:grid-cols-2 gap-16 items-center"
             >
-              <div className="order-2 lg:order-1">
+              <div className="lg:order-1 w-full max-w-md mx-auto lg:max-w-none lg:mx-0">
                 <ProfileImage />
               </div>
 
-              <div className="order-1 lg:order-2 space-y-8">
+              <div className="lg:order-2 space-y-8">
                 <div className="space-y-6">
                   <h2 className="text-3xl md:text-4xl font-medium text-white">
                     Hello, I&apos;m Takahashi
@@ -77,19 +77,19 @@ export const About = () => {
                 <div className="space-y-4">
                   <div className="space-y-3">
                     <p className="text-gray-200 font-light leading-relaxed">
-                      Building web apps & systems with passionate teams
+                      Building Web Apps & Systems with Passionate Teams
                     </p>
                   </div>
                   <div className="space-y-3">
                     <p className="text-gray-200 font-light leading-relaxed">
-                      AI tech exploration / OSS contributions / dev community
+                      AI Tech Exploration / OSS Contributions / Dev Community
                     </p>
                   </div>
                 </div>
 
                 <div className="pt-4">
                   <p className="text-lg text-gray-300 font-light italic">
-                    &quot;Aspiring fullstack engineer&quot;
+                    &quot;Aspiring Fullstack Engineer&quot;
                   </p>
                 </div>
               </div>

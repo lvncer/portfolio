@@ -6,6 +6,7 @@ import {
   LucideIcon,
   Globe,
   Speaker,
+  Instagram,
 } from "lucide-react";
 import { AnimatedElement } from "@/components/ui/animated-element";
 import { ArrowRight } from "lucide-react";
@@ -55,6 +56,13 @@ const links: LinkItem[] = [
     isExternalLink: true,
   },
   {
+    title: "Instagram",
+    description: "Personal life & Photography",
+    icon: Instagram,
+    url: "https://www.instagram.com/kihhi_/",
+    isExternalLink: true,
+  },
+  {
     title: "Email",
     description: "Direct contact for collaboration",
     icon: Mail,
@@ -73,9 +81,9 @@ export const SocialLinks = () => {
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/3 rounded-full blur-3xl" />
 
       <div className="relative z-10 container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-6xl mx-auto">
+        <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-6xl mx-auto">
           {/* Right side - Social links */}
-          <AnimatedElement delay={0.4} className="space-y-4">
+          <AnimatedElement delay={0.4} className="space-y-2">
             {links.map((link, index) => (
               <AnimatedElement
                 key={link.title}
