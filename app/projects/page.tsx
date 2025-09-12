@@ -10,6 +10,24 @@ import Link from "next/link";
 
 const projects = [
   {
+    title: "Claude Code CHANGELOG 監視通知システム",
+    description:
+      "Claude Code リポジトリの CHANGELOG.md 変更を 5 分毎に監視し、DeepL で日本語翻訳して Discord に美しい通知を送るシステムです。",
+    image: "/cc-changelog.png",
+    technologies: [
+      "Node.js",
+      "Discord.js",
+      "DeepL API",
+      "GitHub API",
+      "TypeScript",
+    ],
+    category: "ツール",
+    status: "公開中",
+    year: "2025",
+    github: "https://github.com/lvncer/cc-changelogs",
+    live: "https://discord.gg/mkEWzCDv",
+  },
+  {
     title: "cclog",
     description:
       "Claude Code の会話履歴をコマンドライン上で効率的に閲覧・管理するためのツール。過去のセッションを簡単に検索、閲覧、再開できます。",
