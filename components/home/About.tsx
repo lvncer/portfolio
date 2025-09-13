@@ -26,7 +26,7 @@ const ProfileImage = () => {
 
 export const About = () => {
   return (
-    <div className="relative py-48 overflow-hidden" id="about">
+    <div className="relative py-32 overflow-hidden" id="about">
       {/* Subtle overlay */}
       <div className="absolute inset-0 bg-black/10" />
 
@@ -57,18 +57,18 @@ export const About = () => {
               <div className="lg:order-2 space-y-8">
                 <div className="space-y-6">
                   <h2 className="text-3xl md:text-4xl font-medium text-white">
-                    Hello, I&apos;m Takahashi
+                    What up??
                   </h2>
 
                   <div className="space-y-4 text-gray-200">
                     <div className="flex items-center gap-3">
                       <span className="font-light">
-                        Student at Saitama IT & Web College
+                        さいたまIT・WEB専門学校
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="font-light">
-                        Advanced Information Technology (3rd year)
+                        高度専門士情報技術科 (3年生)
                       </span>
                     </div>
                   </div>

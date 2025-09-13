@@ -63,24 +63,6 @@ export const Hero = () => {
                   </div>
                 </Link>
               </Button>
-
-              <Button
-                variant="ghost"
-                className="group justify-start text-left h-auto p-6 text-gray-200 hover:text-white hover:bg-white/5 transition-all duration-300"
-                asChild
-              >
-                <Link href="#links">
-                  <div className="flex items-center justify-between w-full">
-                    <div>
-                      <div className="text-lg font-medium">Connect</div>
-                      <div className="text-sm text-gray-400 font-light">
-                        Social & Contact
-                      </div>
-                    </div>
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </Link>
-              </Button>
             </div>
           </AnimatedElement>
         </div>

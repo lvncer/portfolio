@@ -73,7 +73,7 @@ const links: LinkItem[] = [
 
 export const SocialLinks = () => {
   return (
-    <div className="relative py-48 overflow-hidden" id="links">
+    <div className="relative py-24 overflow-hidden" id="links">
       {/* Minimal overlay */}
       <div className="absolute inset-0 bg-black/10" />
 

@@ -9,6 +9,18 @@ import { ExternalLink, Building, Calendar, User } from "lucide-react";
 
 const experiences = [
   {
+    id: "worktrack",
+    title: "WorkTrack",
+    company: "SIW Ideaチーム",
+    period: "2025",
+    post: "プロダクトマネージャー、テスターエンジニア",
+    category: "開発プロジェクト",
+    status: "進行中",
+    description:
+      "企業連携の授業で、BSC（ブレインスタッフコンサルティング株式会社）様の社員方が、顧客（学校・企業）のサポートにかかった工数を集計するシステムを開発しています。",
+    skills: ["PHP", "Apache", "MySQL", "AWS"],
+  },
+  {
     id: "livefx",
     title: "LiveFx",
     company: "SIW実行委員会",
@@ -17,7 +29,7 @@ const experiences = [
     category: "開発プロジェクト",
     status: "完了",
     description:
-      "専門学校のグループの入学式イベントで、演者側の MIDI コントローラーによる画面演出の操作を、リアルタイムに観客のスマートフォンへ視覚効果として同期表示させました。",
+      "慈恵学園の専門学校のグループの入学式イベントで、演者側の MIDI コントローラーによる画面演出の操作を、リアルタイムに観客のスマートフォンへ視覚効果として同期表示させました。",
     skills: [
       "React",
       "TypeScript",
