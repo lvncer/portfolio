@@ -19,6 +19,7 @@ const experiences = [
     description:
       "企業連携の授業で、BSC（ブレインスタッフコンサルティング株式会社）様の社員方が、顧客（学校・企業）のサポートにかかった工数を集計するシステムを開発しています。",
     skills: ["PHP", "Apache", "MySQL", "AWS"],
+    url: "https://zenn.dev/tkszenn/articles/1d5e63cfd0d5bc",
   },
   {
     id: "livefx",
