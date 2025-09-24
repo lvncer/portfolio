@@ -27,10 +27,8 @@ const ProfileImage = () => {
 export const About = () => {
   return (
     <div className="relative py-32 overflow-hidden" id="about">
-      {/* Subtle overlay */}
       <div className="absolute inset-0 bg-black/10" />
 
-      {/* Reduced background elements */}
       <div className="absolute top-1/3 left-0 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl" />
       <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-purple-500/3 rounded-full blur-3xl" />
 
@@ -57,39 +55,26 @@ export const About = () => {
               <div className="lg:order-2 space-y-8">
                 <div className="space-y-6">
                   <h2 className="text-3xl md:text-4xl font-medium text-white">
-                    What up??
+                    Whats up??
                   </h2>
-
-                  <div className="space-y-4 text-gray-200">
-                    <div className="flex items-center gap-3">
-                      <span className="font-light">
-                        さいたまIT・WEB専門学校
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <span className="font-light">
-                        高度専門士情報技術科 (3年生)
-                      </span>
-                    </div>
-                  </div>
                 </div>
 
                 <div className="space-y-4">
-                  <div className="space-y-3">
-                    <p className="text-gray-200 font-light leading-relaxed">
-                      Building Web Apps & Systems with Passionate Teams
-                    </p>
+                  <div className="space-y-4 text-gray-200">
+                    <span className="font-light">
+                      さいたまIT・WEB専門学校 高度専門士情報技術科 (3年生)
+                    </span>
                   </div>
                   <div className="space-y-3">
                     <p className="text-gray-200 font-light leading-relaxed">
-                      AI Tech Exploration / OSS Contributions / Dev Community
+                      ガジェット / AI駆動開発 / コミュニティ・テックイベント参加
                     </p>
                   </div>
                 </div>
 
                 <div className="pt-4">
                   <p className="text-lg text-gray-300 font-light italic">
-                    &quot;Aspiring Fullstack Engineer&quot;
+                    &quot;フルスタックエンジニアを目指して&quot;
                   </p>
                 </div>
               </div>

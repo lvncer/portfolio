@@ -22,7 +22,7 @@ const projects = [
       "TypeScript",
     ],
     category: "ツール",
-    status: "公開中",
+    status: "停止",
     year: "2025",
     github: "https://github.com/lvncer/cc-changelogs",
     live: "https://discord.gg/mkEWzCDv",
