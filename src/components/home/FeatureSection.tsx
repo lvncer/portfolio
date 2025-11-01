@@ -49,7 +49,7 @@ export const FeatureSection = () => {
             </p>
           </AnimatedElement>
 
-          <div className="-pd-16 grid grid-cols-1 gap-4 md:grid-cols-1">
+          <div className="-mt-12 grid grid-cols-1 gap-4 md:grid-cols-1">
             {features.map((feature, index) => (
               <AnimatedElement key={index} delay={0.4 + index * 0.1}>
                 <div className="text-leftrounded-xl">
