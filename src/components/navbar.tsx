@@ -6,7 +6,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
-import l from "@/public/l.png"
+import l from "../../public/l.png"
 
 // ナビゲーション項目の定義
 const navItems = [
