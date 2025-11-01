@@ -34,9 +34,9 @@ export const About = () => {
 
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <AnimatedElement delay={0.2} className="text-center mb-20">
-            <h1 className="text-5xl md:text-7xl font-medium tracking-tighter text-white mb-4">
-              About
+          <AnimatedElement delay={0.2} className="text-left mb-12">
+            <h1 className="text-4xl md:text-6xl font-light tracking-tight text-white mb-4">
+              About me
             </h1>
             <p className="text-xl text-gray-300 font-light">
               Who I am & what I do
@@ -54,27 +54,34 @@ export const About = () => {
 
               <div className="lg:order-2 space-y-8">
                 <div className="space-y-6">
-                  <h2 className="text-3xl md:text-4xl font-medium text-white">
-                    Whats up??
+                  <h2 className="text-3xl md:text-4xl font-light text-white">
+                    Takahashi Kihiro
                   </h2>
                 </div>
 
                 <div className="space-y-4">
-                  <div className="space-y-4 text-gray-200">
-                    <span className="font-light">
-                      さいたまIT・WEB専門学校 高度専門士情報技術科 (3年生)
-                    </span>
+                  <div className="space-y-2 text-gray-200">
+                    <p className="font-light leading-relaxed">
+                      さいたまIT・WEB専門学校
+                    </p>
+                    <p className="font-light leading-relaxed">
+                      高度専門士情報技術科 (3年生)
+                    </p>
                   </div>
-                  <div className="space-y-3">
-                    <p className="text-gray-200 font-light leading-relaxed">
+                  <div className="space-y-2 text-gray-200">
+                    <p className="font-light leading-relaxed">
                       ガジェット / AI駆動開発 / コミュニティ・テックイベント参加
+                    </p>
+                    <p className="font-light leading-relaxed">
+                      基本情報技術者 / 情報セキュリティマネジメント
                     </p>
                   </div>
                 </div>
 
                 <div className="pt-4">
                   <p className="text-lg text-gray-300 font-light italic">
-                    &quot;フルスタックエンジニアを目指して&quot;
+                    &quot; Aspire to be an Engineer who Changes the
+                    World!!&quot;
                   </p>
                 </div>
               </div>
