@@ -44,33 +44,6 @@ const features: Feature[] = [
   },
 ]
 
-const pageLinks = [
-  {
-    href: "/skills",
-    title: "Skills",
-  },
-  {
-    href: "/projects",
-    title: "Projects",
-  },
-  {
-    href: "/certifications",
-    title: "Certifications",
-  },
-  {
-    href: "/experiences",
-    title: "Experiences",
-  },
-  {
-    href: "/events",
-    title: "Events",
-  },
-  {
-    href: "/social",
-    title: "Socials",
-  },
-]
-
 export const FeatureSection = () => {
   return (
     <div id="features" className="relative py-16 sm:py-32">
@@ -117,20 +90,6 @@ export const FeatureSection = () => {
                     )}
                   </div>
                 </div>
-              </AnimatedElement>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-2 justify-end gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-3 md:flex lg:gap-x-16">
-            {pageLinks.map((link, index) => (
-              <AnimatedElement key={link.href} delay={0.8 + index * 0.1}>
-                <Link
-                  href={link.href}
-                  className="hover:text-blue-300 transition-colors font-light"
-                >
-                  {link.title}
-                  <span aria-hidden="true">&rarr;</span>
-                </Link>
               </AnimatedElement>
             ))}
           </div>

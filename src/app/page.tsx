@@ -9,8 +9,8 @@ export default function Home() {
     <div className="relative min-h-screen">
       <div className="relative z-10 min-h-screen">
         <Hero />
-        <FeatureSection />
         <About />
+        <FeatureSection />
       </div>
     </div>
   )
