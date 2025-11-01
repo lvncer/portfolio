@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import { SocialLinks } from "@/components/home/SocialLinks";
+import { SocialLinks } from "@/components/home/SocialLinks"
 
 export default function SocialPage(): JSX.Element {
   return (
@@ -9,5 +9,5 @@ export default function SocialPage(): JSX.Element {
         <SocialLinks />
       </div>
     </div>
-  );
+  )
 }

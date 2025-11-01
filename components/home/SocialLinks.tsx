@@ -1,23 +1,23 @@
 import {
-  Github,
-  Mail,
+  ArrowRight,
   ChartNoAxesColumn,
-  Twitter,
-  LucideIcon,
+  Github,
   Globe,
-  Speaker,
   Instagram,
-} from "lucide-react";
-import { AnimatedElement } from "@/components/ui/animated-element";
-import { ArrowRight } from "lucide-react";
+  type LucideIcon,
+  Mail,
+  Speaker,
+  Twitter,
+} from "lucide-react"
+import { AnimatedElement } from "@/components/ui/animated-element"
 
 type LinkItem = {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-  url: string;
-  isExternalLink?: boolean;
-};
+  title: string
+  description: string
+  icon: LucideIcon
+  url: string
+  isExternalLink?: boolean
+}
 
 const links: LinkItem[] = [
   {
@@ -69,7 +69,7 @@ const links: LinkItem[] = [
     url: "mailto:hi@lvncer.dev",
     isExternalLink: true,
   },
-];
+]
 
 export const SocialLinks = () => {
   return (
@@ -117,7 +117,9 @@ export const SocialLinks = () => {
                       rel="noopener noreferrer"
                       className="absolute inset-0 z-10"
                       aria-label={`Visit ${link.title}`}
-                    />
+                    >
+                      <span className="sr-only">{link.title}</span>
+                    </a>
                   )}
                 </div>
               </AnimatedElement>
@@ -138,5 +140,5 @@ export const SocialLinks = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

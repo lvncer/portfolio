@@ -1,14 +1,14 @@
-import { motion, MotionProps } from "framer-motion";
-import { ReactNode } from "react";
+import { type MotionProps, motion } from "framer-motion"
+import type { ReactNode } from "react"
 
 type AnimatedElementProps = {
-  children: ReactNode;
-  delay?: number;
-  duration?: number;
-  y?: number;
-  className?: string;
-  motionProps?: MotionProps;
-};
+  children: ReactNode
+  delay?: number
+  duration?: number
+  y?: number
+  className?: string
+  motionProps?: MotionProps
+}
 
 export const AnimatedElement = ({
   children,
@@ -28,5 +28,5 @@ export const AnimatedElement = ({
     >
       {children}
     </motion.div>
-  );
-};
+  )
+}

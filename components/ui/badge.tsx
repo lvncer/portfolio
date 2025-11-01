@@ -1,7 +1,7 @@
-import * as React from "react";
-import { Slot } from "@radix-ui/react-slot";
-import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@/lib/utils";
+import { Slot } from "@radix-ui/react-slot"
+import { cva, type VariantProps } from "class-variance-authority"
+import * as React from "react"
+import { cn } from "@/lib/utils"
 
 // Variantクラスの定義
 const badgeVariants = cva(
@@ -23,7 +23,7 @@ const badgeVariants = cva(
       variant: "default",
     },
   }
-);
+)
 
 // forwardRefを使ってrefの型をHTMLElementにする
 const Badge = React.forwardRef<
@@ -31,7 +31,7 @@ const Badge = React.forwardRef<
   React.ComponentPropsWithoutRef<"span"> &
     VariantProps<typeof badgeVariants> & { asChild?: boolean }
 >(({ className, variant, asChild = false, ...props }, ref) => {
-  const Comp = asChild ? Slot : "span";
+  const Comp = asChild ? Slot : "span"
   return (
     <Comp
       ref={ref}
@@ -39,9 +39,9 @@ const Badge = React.forwardRef<
       className={cn(badgeVariants({ variant }), className)}
       {...props}
     />
-  );
-});
+  )
+})
 
-Badge.displayName = "Badge";
+Badge.displayName = "Badge"
 
-export { Badge, badgeVariants };
+export { Badge, badgeVariants }

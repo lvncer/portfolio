@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Calendar, Building } from "lucide-react";
+import { motion } from "framer-motion"
+import { Building, Calendar } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const certifications = [
   {
@@ -47,35 +47,35 @@ const certifications = [
     level: "ITSS 2",
     description: "情報セキュリティに関する知識を問う国家資格",
   },
-];
+]
 
 const getCertificationCategoryColor = (category: string) => {
   switch (category) {
     case "プログラミング":
-      return "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300";
+      return "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
     case "国家資格":
-      return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300";
+      return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
     case "免許":
-      return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300";
+      return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"
     default:
-      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300";
+      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300"
   }
-};
+}
 
 const getLevelColor = (level: string) => {
   switch (level) {
     case "上級":
-      return "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300";
+      return "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300"
     case "中級":
-      return "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300";
+      return "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300"
     case "初級":
-      return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300";
+      return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300"
     case "標準":
-      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300";
+      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300"
     default:
-      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300";
+      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300"
   }
-};
+}
 
 export default function Certifications() {
   return (
@@ -141,5 +141,5 @@ export default function Certifications() {
         </motion.div>
       </div>
     </div>
-  );
+  )
 }

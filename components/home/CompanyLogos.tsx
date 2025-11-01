@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/image"
 
 const companies = [
   {
@@ -52,7 +52,7 @@ const companies = [
     logo: "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/vercel-text.png",
     type: "image",
   },
-];
+]
 
 const LogoItem = ({ company }: { company: (typeof companies)[0] }) => (
   <div className="flex items-center justify-center min-w-[280px] h-16 px-6 flex-shrink-0">
@@ -74,14 +74,14 @@ const LogoItem = ({ company }: { company: (typeof companies)[0] }) => (
       </div>
     )}
   </div>
-);
+)
 
 export const CompanyLogos = () => {
   // 各アイテムの幅(280px) + gap(48px) = 328px
   // 全アイテム数 × 328px = 総幅
-  const totalWidth = companies.length * 328;
+  const totalWidth = companies.length * 328
   // アニメーション時間を総幅に比例して計算（1px = 0.1s程度）
-  const animationDuration = Math.max(totalWidth / 50, 30);
+  const animationDuration = Math.max(totalWidth / 50, 30)
 
   return (
     <div className="max-w-7xl mx-auto relative py-32 overflow-hidden">
@@ -108,14 +108,12 @@ export const CompanyLogos = () => {
               <LogoItem
                 key={`first-${company.name}-${index}`}
                 company={company}
-               
               />
             ))}
             {companies.map((company, index) => (
               <LogoItem
                 key={`second-${company.name}-${index}`}
                 company={company}
-               
               />
             ))}
           </div>
@@ -141,5 +139,5 @@ export const CompanyLogos = () => {
         }
       `}</style>
     </div>
-  );
-};
+  )
+}

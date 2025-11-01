@@ -1,12 +1,12 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
-import Image from "next/image";
-import l from "@/public/l.png";
+import { Menu, X } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { useState } from "react"
+import { cn } from "@/lib/utils"
+import l from "@/public/l.png"
 
 // ナビゲーション項目の定義
 const navItems = [
@@ -16,16 +16,16 @@ const navItems = [
   { path: "/experiences", label: "Experience" },
   { path: "/projects", label: "Projects" },
   { path: "/social", label: "Social" },
-];
+]
 
 export default function Navbar() {
-  const pathname = usePathname();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   // モバイルメニューの開閉状態を切り替える関数
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
 
   return (
     <nav className="fixed top-8 left-0 right-0 z-50 mx-12 md:mx-24 rounded-3xl bg-black/20 dark:bg-black/20 backdrop-blur-xl border border-white/10 dark:border-white/10 shadow-xl">
@@ -76,6 +76,7 @@ export default function Navbar() {
         {/* モバイルメニューボタン */}
         <div className="md:hidden flex items-center gap-2">
           <button
+            type="button"
             className="relative bg-accent/30 backdrop-blur-sm hover:bg-accent/50 text-foreground p-2 rounded-xl transition-all duration-300 hover:scale-110"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
@@ -106,5 +107,5 @@ export default function Navbar() {
         </div>
       )}
     </nav>
-  );
+  )
 }

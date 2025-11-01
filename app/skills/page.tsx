@@ -1,48 +1,48 @@
-"use client";
+"use client"
 
 import {
-  Code2,
-  Database,
-  Cpu,
-  Star,
-  LucideIcon,
-  WrenchIcon,
   Brain,
-} from "lucide-react";
-import Image from "next/image";
+  Code2,
+  Cpu,
+  Database,
+  type LucideIcon,
+  Star,
+  WrenchIcon,
+} from "lucide-react"
+import Image from "next/image"
 
 // スキルの型定義
 interface Skill {
-  name: string;
-  stars: 1 | 2 | 3; // 1-3の星評価
-  imageUrl?: string; // PNG画像のURL
-  details?: string; // スキルの詳細説明
+  name: string
+  stars: 1 | 2 | 3 // 1-3の星評価
+  imageUrl?: string // PNG画像のURL
+  details?: string // スキルの詳細説明
 }
 
 // フレームワーク・ライブラリの型定義
 interface Framework {
-  name: string;
-  stars: 1 | 2 | 3;
-  imageUrl?: string;
-  details?: string;
+  name: string
+  stars: 1 | 2 | 3
+  imageUrl?: string
+  details?: string
 }
 
 // 言語スキルの型定義
 interface LanguageSkill {
-  name: string;
-  names?: string[]; // 複数の言語名（JavaScript/TypeScript用）
-  stars: 1 | 2 | 3;
-  imageUrl?: string;
-  imageUrls?: string[]; // 複数の画像URL（JavaScript/TypeScript用）
-  details: string;
-  technologies: Framework[]; // フレームワークとライブラリを統合
+  name: string
+  names?: string[] // 複数の言語名（JavaScript/TypeScript用）
+  stars: 1 | 2 | 3
+  imageUrl?: string
+  imageUrls?: string[] // 複数の画像URL（JavaScript/TypeScript用）
+  details: string
+  technologies: Framework[] // フレームワークとライブラリを統合
 }
 
 // その他のスキルカテゴリの型定義
 interface SkillCategory {
-  title: string;
-  icon: LucideIcon;
-  skills: Skill[];
+  title: string
+  icon: LucideIcon
+  skills: Skill[]
 }
 
 // 言語スキルデータ
@@ -224,7 +224,7 @@ const languageSkills: LanguageSkill[] = [
       },
     ],
   },
-];
+]
 
 // その他のスキルカテゴリデータ
 const otherSkillCategories: SkillCategory[] = [
@@ -274,7 +274,7 @@ const otherSkillCategories: SkillCategory[] = [
       { name: "Devin", stars: 3 },
     ],
   },
-];
+]
 
 // 星評価を表示するコンポーネント
 const StarRating = ({ stars }: { stars: number }) => {
@@ -289,8 +289,8 @@ const StarRating = ({ stars }: { stars: number }) => {
         />
       ))}
     </div>
-  );
-};
+  )
+}
 
 // 言語スキルカードコンポーネント
 const LanguageSkillCard = ({ language }: { language: LanguageSkill }) => {
@@ -363,8 +363,8 @@ const LanguageSkillCard = ({ language }: { language: LanguageSkill }) => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
 export default function Skills(): JSX.Element {
   return (
@@ -433,5 +433,5 @@ export default function Skills(): JSX.Element {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,12 +1,12 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Navbar from "@/components/navbar";
-import Squares from "@/components/Squares";
-import Footer from "@/components/footer";
-import { ThemeProvider } from "@/components/theme-provider";
+import "./globals.css"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import Footer from "@/components/footer"
+import Navbar from "@/components/navbar"
+import Squares from "@/components/Squares"
+import { ThemeProvider } from "@/components/theme-provider"
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="ja" suppressHydrationWarning>
@@ -48,5 +48,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
