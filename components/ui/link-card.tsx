@@ -1,19 +1,19 @@
-import { LucideIcon } from "lucide-react";
-import Link from "next/link";
+import type { LucideIcon } from "lucide-react"
+import Link from "next/link"
 import {
   Card,
+  CardDescription,
   CardHeader,
   CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
+} from "@/components/ui/card"
 
 type LinkCardProps = {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-  url: string;
-  isExternalLink?: boolean;
-};
+  title: string
+  description: string
+  icon: LucideIcon
+  url: string
+  isExternalLink?: boolean
+}
 
 export const LinkCard = ({
   title,
@@ -44,5 +44,5 @@ export const LinkCard = ({
         </CardHeader>
       </Card>
     </Link>
-  );
-};
+  )
+}

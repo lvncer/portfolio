@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { AnimatedElement } from "@/components/ui/animated-element";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react"
+import Link from "next/link"
+import { AnimatedElement } from "@/components/ui/animated-element"
+import { Button } from "@/components/ui/button"
 
 export const Hero = () => {
   return (
@@ -64,5 +64,5 @@ export const Hero = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

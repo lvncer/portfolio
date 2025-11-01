@@ -1,12 +1,12 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Github, Globe, Calendar } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import { motion } from "framer-motion"
+import { Calendar, Github, Globe } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const projects = [
   {
@@ -121,37 +121,37 @@ const projects = [
     github: "https://github.com/lvncer/nextsns",
     live: "https://nextsns-one.vercel.app",
   },
-];
+]
 
 const getStatusColor = (status: string) => {
   switch (status) {
     case "公開中":
-      return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300";
+      return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"
     case "開発中":
-      return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300";
+      return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
     case "メンテナンス":
-      return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300";
+      return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300"
     case "停止":
-      return "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300";
+      return "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300"
     default:
-      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300";
+      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300"
   }
-};
+}
 
 const getCategoryColor = (category: string) => {
   switch (category) {
     case "Webアプリケーション":
-      return "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300";
+      return "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
     case "ツール":
-      return "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300";
+      return "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300"
     case "SNS":
-      return "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300";
+      return "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300"
     case "ライブラリ":
-      return "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300";
+      return "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300"
     default:
-      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300";
+      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300"
   }
-};
+}
 
 export default function Projects() {
   return (
@@ -248,5 +248,5 @@ export default function Projects() {
         </motion.div>
       </div>
     </div>
-  );
+  )
 }

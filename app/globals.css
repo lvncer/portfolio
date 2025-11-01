@@ -92,12 +92,12 @@
 }
 
 .dark .gradient-bg {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       135deg,
       var(--gradient-bg-dark-1) 0%,
       var(--gradient-bg-dark-2) 100%
-    ),
-    #0a0a0a;
+    ), #0a0a0a;
 }
 
 /* 薄いオーバーレイグラデーション */

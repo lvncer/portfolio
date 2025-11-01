@@ -1,7 +1,7 @@
-import Image from "next/image";
-import myimg from "@/public/profile.jpeg";
-import { LazyLoad } from "@/components/ui/lazy-load";
-import { AnimatedElement } from "@/components/ui/animated-element";
+import Image from "next/image"
+import { AnimatedElement } from "@/components/ui/animated-element"
+import { LazyLoad } from "@/components/ui/lazy-load"
+import myimg from "@/public/profile.jpeg"
 
 // プロフィール画像を最適化するコンポーネント
 const ProfileImage = () => {
@@ -21,8 +21,8 @@ const ProfileImage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export const About = () => {
   return (
@@ -83,5 +83,5 @@ export const About = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
-import { Github } from "lucide-react";
-import Link from "next/link";
+import { Github } from "lucide-react"
+import Link from "next/link"
 
 export default function Footer() {
   return (
@@ -41,5 +41,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

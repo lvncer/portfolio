@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
-import { Hero } from "@/components/home/Hero";
-import { FeatureSection } from "@/components/home/FeatureSection";
-import { About } from "@/components/home/About";
+import { About } from "@/components/home/About"
+import { FeatureSection } from "@/components/home/FeatureSection"
+import { Hero } from "@/components/home/Hero"
 
 export default function Home() {
   return (
@@ -13,5 +13,5 @@ export default function Home() {
         <About />
       </div>
     </div>
-  );
+  )
 }

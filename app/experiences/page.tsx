@@ -1,11 +1,11 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { ExternalLink, Building, Calendar, User } from "lucide-react";
+import { motion } from "framer-motion"
+import { Building, Calendar, ExternalLink, User } from "lucide-react"
+import Link from "next/link"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const experiences = [
   {
@@ -67,35 +67,35 @@ const experiences = [
     skills: ["Python"],
     url: "https://www.drokatsu.com/news/drokatsutaikai-zenkoku",
   },
-];
+]
 
 const getExperienceCategoryColor = (category: string) => {
   switch (category) {
     case "開発プロジェクト":
-      return "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300";
+      return "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300"
     case "競技":
-      return "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300";
+      return "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300"
     case "インターン":
-      return "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300";
+      return "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
     default:
-      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300";
+      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300"
   }
-};
+}
 
 const getExperienceStatusColor = (status: string) => {
   switch (status) {
     case "優勝":
-      return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300";
+      return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300"
     case "完了":
-      return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300";
+      return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"
     case "参加":
-      return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300";
+      return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
     case "進行中":
-      return "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300";
+      return "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300"
     default:
-      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300";
+      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300"
   }
-};
+}
 
 export default function Experiences() {
   return (
@@ -188,5 +188,5 @@ export default function Experiences() {
         </motion.div>
       </div>
     </div>
-  );
+  )
 }
