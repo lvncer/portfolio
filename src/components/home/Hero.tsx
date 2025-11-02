@@ -29,12 +29,12 @@ export const Hero = () => {
                 className="group justify-start text-left h-auto p-6 text-gray-200 hover:text-white hover:bg-white/5 transition-all duration-300"
                 asChild
               >
-                <Link href="#features">
+                <Link href="#about">
                   <div className="flex items-center justify-between w-full">
                     <div>
-                      <div className="text-lg font-medium">Features</div>
+                      <div className="text-lg font-medium">Explore</div>
                       <div className="text-sm text-gray-400 font-light">
-                        Core Values
+                        About & Background
                       </div>
                     </div>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -47,12 +47,12 @@ export const Hero = () => {
                 className="group justify-start text-left h-auto p-6 text-gray-200 hover:text-white hover:bg-white/5 transition-all duration-300"
                 asChild
               >
-                <Link href="#about">
+                <Link href="#features">
                   <div className="flex items-center justify-between w-full">
                     <div>
-                      <div className="text-lg font-medium">Explore</div>
+                      <div className="text-lg font-medium">Features</div>
                       <div className="text-sm text-gray-400 font-light">
-                        About & Background
+                        Core Values
                       </div>
                     </div>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
