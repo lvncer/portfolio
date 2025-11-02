@@ -10,6 +10,25 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const projects = [
   {
+    title: "Kaiwa Dash",
+    description: "AI との会話練習でコミュニケーション力を向上させる Web アプリ",
+    image:
+      "https://github.com/lvncer/kaiwa-dash/raw/main/public/images/result.png",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "OpenAPI",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Vercel",
+    ],
+    category: "Webアプリケーション",
+    status: "公開中",
+    year: "2025",
+    github: "https://github.com/lvncer/kaiwa-dash",
+    live: "https://kaiwa-dash.vercel.app",
+  },
+  {
     title: "Claude Code CHANGELOG 監視通知システム",
     description:
       "Claude Code リポジトリの CHANGELOG.md 変更を 5 分毎に監視し、DeepL で日本語翻訳して Discord に美しい通知を送るシステムです。",
