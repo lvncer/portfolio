@@ -2,14 +2,12 @@ import {
   ArrowRight,
   ChartNoAxesColumn,
   Github,
-  Globe,
   Instagram,
   type LucideIcon,
   Mail,
   Speaker,
   Twitter,
 } from "lucide-react"
-import { AnimatedElement } from "@/components/ui/animated-element"
 
 type LinkItem = {
   title: string
@@ -42,13 +40,6 @@ const links: LinkItem[] = [
     isExternalLink: true,
   },
   {
-    title: "Connpass",
-    description: "Event participation records",
-    icon: Globe,
-    url: "https://connpass.com/user/lvncer",
-    isExternalLink: true,
-  },
-  {
     title: "X",
     description: "AI trends & Tech updates",
     icon: Twitter,
@@ -73,7 +64,10 @@ const links: LinkItem[] = [
 
 export const SocialLinks = () => {
   return (
-    <div className="relative py-24 overflow-hidden" id="links">
+    <div
+      className="relative py-12 pb-32 overflow-hidden scroll-mt-32"
+      id="contact"
+    >
       {/* Minimal overlay */}
       <div className="absolute inset-0 bg-black/10" />
 
@@ -83,30 +77,26 @@ export const SocialLinks = () => {
       <div className="relative z-10 container mx-auto px-4">
         <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-6xl mx-auto">
           {/* Right side - Social links */}
-          <AnimatedElement delay={0.4} className="space-y-2">
-            {links.map((link, index) => (
-              <AnimatedElement
-                key={link.title}
-                delay={0.6 + index * 0.1}
-                className="group"
-              >
+          <div className="space-y-2">
+            {links.map((link) => (
+              <div key={link.title}>
                 <div className="relative">
-                  <div className="rounded-xl p-6 group-hover:bg-black/40 transition-all duration-300">
+                  <div className="rounded-xl p-6">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
                         <div className="bg-white/10 rounded-lg p-3">
-                          <link.icon className="h-6 w-6 text-white/80 group-hover:text-white transition-colors duration-300" />
+                          <link.icon className="h-6 w-6 text-white/80" />
                         </div>
                         <div>
-                          <div className="text-lg font-medium text-white group-hover:text-blue-200 transition-colors duration-300">
+                          <div className="text-lg font-light text-white">
                             {link.title}
                           </div>
-                          <div className="text-sm text-gray-400 font-light">
+                          <div className="text-sm text-gray-400 font-extralight">
                             {link.description}
                           </div>
                         </div>
                       </div>
-                      <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" />
+                      <ArrowRight className="w-5 h-5 text-gray-400" />
                     </div>
                   </div>
 
@@ -122,21 +112,21 @@ export const SocialLinks = () => {
                     </a>
                   )}
                 </div>
-              </AnimatedElement>
+              </div>
             ))}
-          </AnimatedElement>
+          </div>
 
           {/* Left side - Simple text */}
-          <AnimatedElement delay={0.2} className="space-y-6">
+          <div className="space-y-6">
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl font-medium tracking-tighter text-white">
+              <h1 className="text-5xl md:text-6xl font-light tracking-tighter text-white">
                 Connect
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-lg">
+              <p className="text-xl md:text-2xl text-gray-300 font-extralight leading-relaxed max-w-lg">
                 Let&apos;s build something amazing together.
               </p>
             </div>
-          </AnimatedElement>
+          </div>
         </div>
       </div>
     </div>
