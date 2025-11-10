@@ -10,6 +10,27 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const projects = [
   {
+    title: "VRMCP",
+    description: "VRM モデルを AI が自然言語で制御できる MCP リモートサーバー",
+    image:
+      "https://github.com/lvncer/vrmcp/blob/main/public/images/animate_vrm_bone.png?raw=true",
+    technologies: [
+      "Nodejs",
+      "Express",
+      "React",
+      "VRM",
+      "stdio / SSE",
+      "MCP",
+      "Upstash Redis",
+      "Railway",
+    ],
+    category: "Webアプリケーション",
+    status: "公開中",
+    year: "2025",
+    github: "https://github.com/lvncer/vrmcp",
+    live: "https://vrmcp.up.railway.app/",
+  },
+  {
     title: "Kaiwa Dash",
     description: "AI との会話練習でコミュニケーション力を向上させる Web アプリ",
     image:
