@@ -366,7 +366,7 @@ const LanguageSkillCard = ({ language }: { language: LanguageSkill }) => {
   )
 }
 
-export default function Skills(): JSX.Element {
+export default function Skills() {
   return (
     <div className="min-h-screen">
       <div className="container mx-auto px-4 py-24">
