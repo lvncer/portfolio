@@ -8,12 +8,47 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-const projects = [
+type Project = {
+  title: string
+  description: string
+  image: string
+  video?: string
+  technologies: string[]
+  category: string
+  status: string
+  year: string
+  github?: string
+  live?: string
+}
+
+const projects: Project[] = [
   {
-    title: "VRMCP",
-    description: "VRM モデルを AI が自然言語で制御できる MCP リモートサーバー",
+    title: "QuickLinks",
+    description:
+      "気になった Web ページの URL をブラウザ拡張から一瞬で保存して、ダッシュボードで週次・月次ダイジェストにまとめる Web アプリ",
     image:
-      "https://github.com/lvncer/vrmcp/blob/main/public/images/animate_vrm_bone.png?raw=true",
+      "https://github.com/lvncer/quicklinks/blob/main/public/images/toppage.jpeg?raw=true",
+    technologies: [
+      "Next.js",
+      "Go",
+      "Gin",
+      "Ent",
+      "Google Chrome Extension",
+      "Supabase",
+      "Clerk",
+      "Docker",
+    ],
+    category: "Webアプリケーション",
+    status: "開発中",
+    year: "2025",
+    github: "https://github.com/lvncer/vrmcp",
+    live: "https://quicklinks-zeta.vercel.app/",
+  },
+  {
+    title: "Coeur",
+    description: "glb モデルを AI が自然言語で制御できる MCP リモートサーバー",
+    image: "",
+    video: "/coeur-mcp.mp4",
     technologies: [
       "Nodejs",
       "Express",
@@ -24,11 +59,10 @@ const projects = [
       "Upstash Redis",
       "Railway",
     ],
-    category: "Webアプリケーション",
+    category: "ツール",
     status: "公開中",
     year: "2025",
-    github: "https://github.com/lvncer/vrmcp",
-    live: "https://vrmcp.up.railway.app/",
+    github: "https://github.com/lvncer/coeur",
   },
   {
     title: "Kaiwa Dash",
@@ -44,13 +78,13 @@ const projects = [
       "Vercel",
     ],
     category: "Webアプリケーション",
-    status: "公開中",
+    status: "停止",
     year: "2025",
     github: "https://github.com/lvncer/kaiwa-dash",
     live: "https://kaiwa-dash.vercel.app",
   },
   {
-    title: "Claude Code CHANGELOG 監視通知システム",
+    title: "cc-changelogs",
     description:
       "Claude Code リポジトリの CHANGELOG.md 変更を 5 分毎に監視し、DeepL で日本語翻訳して Discord に美しい通知を送るシステムです。",
     image: "/cc-changelog.png",
@@ -93,7 +127,7 @@ const projects = [
       "Gemini",
     ],
     category: "Webアプリケーション",
-    status: "公開中",
+    status: "停止",
     year: "2025",
     github: "https://github.com/lvncer/echoes",
     live: "https://echoes-livid.vercel.app/",
@@ -236,13 +270,26 @@ export default function Projects() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="aspect-video relative overflow-hidden rounded-lg">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        className="object-cover w-full h-full transition-transform hover:scale-105"
-                        width={500}
-                        height={300}
-                      />
+                      {project.video ? (
+                        <video
+                          src={project.video}
+                          className="object-cover w-full h-full"
+                          muted
+                          playsInline
+                          autoPlay
+                          loop
+                          controls={false}
+                          preload="metadata"
+                        />
+                      ) : (
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          className="object-cover w-full h-full transition-transform hover:scale-105"
+                          width={500}
+                          height={300}
+                        />
+                      )}
                     </div>
                     <p className="text-sm text-muted-foreground">
                       {project.description}

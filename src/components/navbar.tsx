@@ -27,7 +27,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="fixed top-8 left-0 right-0 z-50 mx-12 md:mx-24 rounded-3xl bg-black/20 dark:bg-black/20 backdrop-blur-xl border border-white/10 dark:border-white/10 shadow-xl">
+    <nav className="fixed top-8 left-0 right-0 z-50 mx-2 md:mx-24 rounded-3xl bg-black/20 dark:bg-black/20 backdrop-blur-xl border border-white/10 dark:border-white/10 shadow-xl">
       <div className="container mx-auto px-4 md:px-12 h-16 flex items-center justify-between">
         {/* ロゴと名前 */}
         <div className="flex items-center gap-4">
