@@ -183,7 +183,7 @@ const languageSkills: LanguageSkill[] = [
   },
   {
     name: "Go",
-    stars: 1,
+    stars: 2,
     imageUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
     details:
@@ -193,7 +193,13 @@ const languageSkills: LanguageSkill[] = [
         name: "Gin",
         stars: 1,
         details:
-          "GoのWebフレームワーク。基本的なCRUD操作とミドルウェアの使用経験。",
+          "Go の Web フレームワーク。基本的な CRUD 操作とミドルウェアの使用経験。",
+      },
+      {
+        name: "ent.",
+        stars: 1,
+        details:
+          "Go の ORM。データベースとの連携を容易にするためのライブラリ。",
       },
     ],
   },

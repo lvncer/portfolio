@@ -23,7 +23,7 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "QuickLinks",
+    title: "Clipgest",
     description:
       "気になった Web ページの URL をブラウザ拡張から一瞬で保存して、ダッシュボードで週次・月次ダイジェストにまとめる Web アプリ",
     image:
@@ -39,10 +39,10 @@ const projects: Project[] = [
       "Docker",
     ],
     category: "Webアプリケーション",
-    status: "開発中",
+    status: "公開中",
     year: "2025",
-    github: "https://github.com/lvncer/vrmcp",
-    live: "https://quicklinks-zeta.vercel.app/",
+    github: "https://github.com/lvncer/clipgest",
+    live: "https://www.clipgest.com/about",
   },
   {
     title: "Coeur",
@@ -60,7 +60,7 @@ const projects: Project[] = [
       "Railway",
     ],
     category: "ツール",
-    status: "公開中",
+    status: "開発中",
     year: "2025",
     github: "https://github.com/lvncer/coeur",
   },
@@ -190,7 +190,7 @@ const projects: Project[] = [
       "MongoDB",
     ],
     category: "Webアプリケーション",
-    status: "公開中",
+    status: "停止",
     year: "2024",
     github: "https://github.com/lvncer/nextsns",
     live: "https://nextsns-one.vercel.app",
