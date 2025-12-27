@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { AnimatedElement } from "@/components/ui/animated-element"
 import { LazyLoad } from "@/components/ui/lazy-load"
-import myimg from "../../../public/profile.jpeg"
+import myimg from "../../../public/images/profile.jpg"
 
 // プロフィール画像を最適化するコンポーネント
 const ProfileImage = () => {
