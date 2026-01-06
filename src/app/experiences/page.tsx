@@ -9,13 +9,25 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const experiences = [
   {
+    id: "imaaiteru-kun",
+    title: "今空いてる？君",
+    company: "Team Idea",
+    period: "2025-2026",
+    post: "プロダクトマネージャー",
+    category: "開発プロジェクト",
+    status: "進行中",
+    description:
+      "ユーザが出発地と日付を入力すると、近隣のイベント情報を取得し、時刻表などと組み合わせて駅の混雑を予測するWebアプリケーション",
+    skills: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Gemini SDK"],
+  },
+  {
     id: "worktrack",
     title: "WorkTrack",
     company: "SIW Ideaチーム",
     period: "2025",
     post: "プロダクトマネージャー、テスターエンジニア",
     category: "開発プロジェクト",
-    status: "進行中",
+    status: "完了",
     description:
       "企業連携の授業で、BSC（ブレインスタッフコンサルティング株式会社）様の社員方が、顧客（学校・企業）のサポートにかかった工数を集計するシステムを開発しています。",
     skills: ["PHP", "Apache", "MySQL", "AWS"],
@@ -25,10 +37,10 @@ const experiences = [
     id: "livefx",
     title: "LiveFx",
     company: "SIW実行委員会",
-    period: "2025",
+    period: "2025-2026",
     post: "プロジェクトマネージャー、フロントエンドエンジニア",
     category: "開発プロジェクト",
-    status: "完了",
+    status: "進行中",
     description:
       "慈恵学園の専門学校のグループの入学式イベントで、演者側の MIDI コントローラーによる画面演出の操作を、リアルタイムに観客のスマートフォンへ視覚効果として同期表示させました。",
     skills: [
@@ -105,14 +117,14 @@ export default function Experiences() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-6xl mx-auto"
         >
           <section>
             <h1 className="text-4xl font-bold mb-4">外部での経験</h1>
             <p className="text-muted-foreground mb-8">
               学外での開発プロジェクトや競技への参加を通じて、実践的なスキルと経験を積んでいます。
             </p>
-            <div className="grid gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {experiences.map((exp, index) => (
                 <motion.div
                   key={exp.title}

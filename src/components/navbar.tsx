@@ -12,7 +12,6 @@ import l from "../../public/l.png"
 const navItems = [
   { path: "/", label: "Home" },
   { path: "/skills", label: "Skills" },
-  { path: "/certifications", label: "Cert" },
   { path: "/experiences", label: "Experience" },
   { path: "/projects", label: "Projects" },
 ]

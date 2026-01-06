@@ -47,13 +47,6 @@ const links: LinkItem[] = [
     isExternalLink: true,
   },
   {
-    title: "Instagram",
-    description: "Personal life & Photography",
-    icon: Instagram,
-    url: "https://www.instagram.com/kihhi_/",
-    isExternalLink: true,
-  },
-  {
     title: "Email",
     description: "Direct contact for collaboration",
     icon: Mail,
