@@ -2,11 +2,38 @@ import type { Project } from "@/types/project"
 
 export const PROJECTS = [
   {
+    title: "Music Player TUI",
+    description: "再生中の音楽をターミナルで操作できるツール",
+    image: "/images/music-player-tui.png",
+    technologies: ["Go"],
+    category: "ツール",
+    status: "開発中",
+    year: "2026",
+    github: "https://github.com/lvncer/music-player-tui",
+  },
+  {
+    title: "home",
+    description:
+      "ポモドーロ時計や再生中の音楽などを表示できるデスクトップアプリ",
+    image: "/images/home.jpeg",
+    technologies: [
+      "TypeScript",
+      "React",
+      "Tailwind CSS",
+      "Vite",
+      "Electron",
+      "Tauri",
+    ],
+    category: "ツール",
+    status: "開発中",
+    year: "2026",
+    github: "https://github.com/lvncer/home",
+  },
+  {
     title: "Clipgest",
     description:
       "気になった Web ページの URL をブラウザ拡張から一瞬で保存して、ダッシュボードで週次・月次ダイジェストにまとめる Web アプリ",
-    image:
-      "https://github.com/lvncer/quicklinks/blob/main/public/images/toppage.jpeg?raw=true",
+    image: "/images/clipgest.jpeg",
     technologies: [
       "Next.js",
       "Go",
@@ -18,7 +45,7 @@ export const PROJECTS = [
       "Docker",
     ],
     category: "Webアプリケーション",
-    status: "公開中",
+    status: "停止",
     year: "2025",
     github: "https://github.com/lvncer/clipgest",
     live: "https://www.clipgest.com/about",
@@ -64,7 +91,7 @@ export const PROJECTS = [
     title: "cc-changelogs",
     description:
       "Claude Code リポジトリの CHANGELOG.md 変更を 5 分毎に監視し、DeepL で日本語翻訳して Discord に美しい通知を送るシステムです。",
-    image: "/cc-changelog.png",
+    image: "/images/cc-changelog.png",
     technologies: [
       "Node.js",
       "Discord.js",
@@ -93,7 +120,7 @@ export const PROJECTS = [
     title: "Echoes",
     description:
       "AIの3Dモデルと直接会話ができるWebアプリ。音声入力から認識・合成・出力までできます。",
-    image: "/echoes.jpeg",
+    image: "/images/echoes.jpeg",
     technologies: [
       "Next.Js",
       "TypeScript",
@@ -110,7 +137,7 @@ export const PROJECTS = [
     title: "NameCard",
     description:
       "Markdown ファイルから美しい名刺を作成・エクスポートできる CLI ツール",
-    image: "/name-card.jpg",
+    image: "/images/name-card.jpg",
     technologies: [
       "Next.Js",
       "TypeScript",
@@ -128,7 +155,7 @@ export const PROJECTS = [
     title: "LightningTalks",
     description:
       "ライトニングトーク管理サイト。学校でLTを行いたいという意見が多かったため作成しました。学校の学生だけでなく、外部のユーザも登録可能です。",
-    image: "/lt.png",
+    image: "/images/lt.png",
     technologies: ["Next.Js", "TypeScript", "Neon", "Clerk"],
     category: "Webアプリケーション",
     status: "公開中",
@@ -140,7 +167,7 @@ export const PROJECTS = [
     title: "Bookmarks",
     description:
       "シンプルなブックマークマネージャー。カテゴリ別にブックマークを管理できます。",
-    image: "/bookmark.png",
+    image: "/images/bookmark.png",
     technologies: ["Next.Js", "TypeScript", "Supabase", "Clerk"],
     category: "Webアプリケーション",
     status: "停止",
@@ -151,7 +178,7 @@ export const PROJECTS = [
     title: "Next SNS",
     description:
       "シンプルなSNSのクローンサイト。フルスタックで作成した初めてのWebアプリです。",
-    image: "/nextsns.png",
+    image: "/images/nextsns.png",
     technologies: [
       "Next.js",
       "TypeScript",
