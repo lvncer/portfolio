@@ -1,4 +1,5 @@
 import {
+  BookOpen,
   ChartNoAxesColumn,
   FishSymbol,
   Github,
@@ -22,6 +23,13 @@ export const SOCIAL_LINKS = [
     description: "Tech articles & programming insights",
     icon: ChartNoAxesColumn,
     url: "https://zenn.dev/tkszenn",
+    isExternalLink: true,
+  },
+  {
+    title: "Blog",
+    description: "My blog posts",
+    icon: BookOpen,
+    url: "https://blog.lvncer.dev",
     isExternalLink: true,
   },
   {
