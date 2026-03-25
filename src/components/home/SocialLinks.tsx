@@ -1,59 +1,5 @@
-import {
-  ArrowRight,
-  ChartNoAxesColumn,
-  Github,
-  Instagram,
-  type LucideIcon,
-  Mail,
-  Speaker,
-  Twitter,
-} from "lucide-react"
-
-type LinkItem = {
-  title: string
-  description: string
-  icon: LucideIcon
-  url: string
-  isExternalLink?: boolean
-}
-
-const links: LinkItem[] = [
-  {
-    title: "GitHub",
-    description: "Open source projects & contributions",
-    icon: Github,
-    url: "https://github.com/lvncer",
-    isExternalLink: true,
-  },
-  {
-    title: "Zenn",
-    description: "Tech articles & programming insights",
-    icon: ChartNoAxesColumn,
-    url: "https://zenn.dev/tkszenn",
-    isExternalLink: true,
-  },
-  {
-    title: "Speaker Deck",
-    description: "Tech presentations",
-    icon: Speaker,
-    url: "https://speakerdeck.com/lvncer",
-    isExternalLink: true,
-  },
-  {
-    title: "X",
-    description: "AI trends & Tech updates",
-    icon: Twitter,
-    url: "https://x.com/kihhi_",
-    isExternalLink: true,
-  },
-  {
-    title: "Email",
-    description: "Direct contact for collaboration",
-    icon: Mail,
-    url: "mailto:hi@lvncer.dev",
-    isExternalLink: true,
-  },
-]
+import { ArrowRight } from "lucide-react"
+import { SOCIAL_LINKS } from "@/constants/social-links"
 
 export const SocialLinks = () => {
   return (
@@ -71,7 +17,7 @@ export const SocialLinks = () => {
         <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-6xl mx-auto">
           {/* Right side - Social links */}
           <div className="space-y-2">
-            {links.map((link) => (
+            {SOCIAL_LINKS.map((link) => (
               <div key={link.title}>
                 <div className="relative">
                   <div className="rounded-xl p-6">
