@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ja" suppressHydrationWarning>
+    <html lang="ja">
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
@@ -31,7 +31,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="relative z-10 min-h-screen bg-background gradient-bg">
-            {/* Global animated grid background */}
             <div className="fixed inset-0 -z-10 pointer-events-none">
               <Squares
                 speed={0.2}
