@@ -8,11 +8,47 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
+const siteTitle = "lvncer's Portfolio"
+const siteDescription = "lvncer's portfolio website"
+
+function getMetadataBase(): URL {
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return new URL(process.env.NEXT_PUBLIC_SITE_URL)
+  }
+  if (process.env.VERCEL_URL) {
+    return new URL(`https://${process.env.VERCEL_URL}`)
+  }
+  return new URL("http://localhost:3000")
+}
+
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "lvncer portfolio website",
+  metadataBase: getMetadataBase(),
+  title: siteTitle,
+  description: siteDescription,
   icons: {
     icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    url: "/",
+    siteName: siteTitle,
+    locale: "ja_JP",
+    type: "website",
+    images: [
+      {
+        url: "/ogimage.png",
+        width: 1200,
+        height: 630,
+        alt: siteTitle,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/ogimage.png"],
   },
 }
 
