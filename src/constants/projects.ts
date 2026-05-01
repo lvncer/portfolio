@@ -2,6 +2,16 @@ import type { Project } from "@/types/project"
 
 export const PROJECTS = [
   {
+    title: "TUI launcher",
+    description: "Goで作る“自作rofi（ランチャー）”",
+    video: "videos/launcher.mp4",
+    technologies: ["Go"],
+    category: "ツール",
+    status: "開発中",
+    year: "2026",
+    github: "https://github.com/lvncer/launcher",
+  },
+  {
     title: "Music Player TUI",
     description: "再生中の音楽をターミナルで操作できるツール",
     image: "/images/music-player-tui.png",
@@ -53,7 +63,7 @@ export const PROJECTS = [
   {
     title: "Coeur",
     description: "glb モデルを AI が自然言語で制御できる MCP リモートサーバー",
-    video: "/coeur-mcp.mp4",
+    video: "videos/coeur-mcp.mp4",
     technologies: [
       "Nodejs",
       "Express",
