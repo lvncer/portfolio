@@ -4,7 +4,7 @@ export const PROJECTS = [
   {
     title: "TUI launcher",
     description: "Goで作る“自作rofi（ランチャー）”",
-    video: "videos/launcher.mp4",
+    video: "videos/launcher.mov",
     technologies: ["Go"],
     category: "ツール",
     status: "開発中",
