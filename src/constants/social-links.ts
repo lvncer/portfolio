@@ -40,20 +40,6 @@ export const SOCIAL_LINKS = [
     isExternalLink: true,
   },
   {
-    title: "X",
-    description: "AI trends & Tech updates",
-    icon: Twitter,
-    url: "https://x.com/kihhi_",
-    isExternalLink: true,
-  },
-  {
-    title: "Mastodon",
-    description: "Personal life posts",
-    icon: FishSymbol,
-    url: "https://mastodon.social/@lvncer",
-    isExternalLink: true,
-  },
-  {
     title: "Instagram",
     description: "Personal life & photos",
     icon: Instagram,
