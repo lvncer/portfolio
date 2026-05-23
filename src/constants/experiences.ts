@@ -2,16 +2,40 @@ import type { Experience } from "@/types/experience"
 
 export const EXPERIENCES = [
   {
+    id: "livefx 2026",
+    title: "LiveFx 2026",
+    company: "SIW実行委員会",
+    period: "2026",
+    post: "プロジェクトマネージャー、フロントエンドエンジニア",
+    category: "開発プロジェクト",
+    status: "完了",
+    description:
+      "慈恵学園の専門学校のグループの入学式イベントで、演者側の MIDI コントローラーによる画面演出の操作を、リアルタイムに観客のスマートフォンへ視覚効果として同期表示させました。クライアントから桜を咲かせるインタラクティブな演出を追加しました。",
+    skills: [
+      "React",
+      "Vite",
+      "TypeScript",
+      "WebSocket",
+      "k8s",
+      "Express",
+      "AWS ECS",
+      "Prometheus",
+      "Grafana",
+    ],
+    url: "https://zenn.dev/siw/articles/5e3ba45a682a91",
+  },
+  {
     id: "imaaiteru-kun",
     title: "今空いてる？君",
     company: "Team Idea",
     period: "2026",
     post: "プロダクトマネージャー",
     category: "開発プロジェクト",
-    status: "進行中",
+    status: "完了",
     description:
       "ユーザが出発地と日付を入力すると、近隣のイベント情報を取得し、時刻表などと組み合わせて駅の混雑を予測するWebアプリケーション",
     skills: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Gemini SDK"],
+    url: "https://github.com/opendata-idea/imaaiteru-kun",
   },
   {
     id: "worktrack",
@@ -33,7 +57,7 @@ export const EXPERIENCES = [
     period: "2025",
     post: "プロジェクトマネージャー、フロントエンドエンジニア",
     category: "開発プロジェクト",
-    status: "進行中",
+    status: "完了",
     description:
       "慈恵学園の専門学校のグループの入学式イベントで、演者側の MIDI コントローラーによる画面演出の操作を、リアルタイムに観客のスマートフォンへ視覚効果として同期表示させました。",
     skills: [

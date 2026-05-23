@@ -65,7 +65,7 @@ export const About = () => {
                       さいたまIT・WEB専門学校
                     </p>
                     <p className="font-light leading-relaxed">
-                      高度専門士情報技術科 (3年生)
+                      高度専門士情報技術科 (4年生)
                     </p>
                   </div>
                   <div className="space-y-2 text-gray-200">
