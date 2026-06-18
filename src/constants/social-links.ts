@@ -1,12 +1,10 @@
 import {
   BookOpen,
   ChartNoAxesColumn,
-  FishSymbol,
   Github,
   Instagram,
   Mail,
   Speaker,
-  Twitter,
   Youtube,
 } from "lucide-react"
 import type { SocialLink } from "@/types/social-link"
@@ -17,6 +15,13 @@ export const SOCIAL_LINKS = [
     description: "Open source projects & contributions",
     icon: Github,
     url: "https://github.com/lvncer",
+    isExternalLink: true,
+  },
+  {
+    title: "lvncerpedia",
+    description: "My personal knowledge base",
+    icon: BookOpen,
+    url: "https://github.com/lvncerpedia",
     isExternalLink: true,
   },
   {

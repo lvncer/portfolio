@@ -31,3 +31,24 @@ export type SkillCategory = {
   icon: LucideIcon
   skills: Skill[]
 }
+
+export type SkillTileSize = "sm" | "md" | "lg"
+
+export type SkillTileProps = {
+  name: string
+  stars: SkillStar
+  imageUrl?: string
+  imageUrls?: string[]
+  details?: string
+  size?: SkillTileSize
+}
+
+export type SkillIconProps = Pick<
+  SkillTileProps,
+  "name" | "imageUrl" | "imageUrls" | "size"
+>
+
+export type ProficiencyIndicatorProps = {
+  stars: SkillStar
+  size?: SkillTileSize
+}

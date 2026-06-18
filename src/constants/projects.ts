@@ -2,12 +2,12 @@ import type { Project } from "@/types/project"
 
 export const PROJECTS = [
   {
-    title: "TUI launcher",
-    description: "Goで作る“自作rofi（ランチャー）”",
+    title: "launcher",
+    description: "Goで作る“自作 TUI rofi（ランチャー）”",
     video: "videos/launcher.mov",
     technologies: ["Go"],
     category: "ツール",
-    status: "開発中",
+    status: "公開中",
     year: "2026",
     github: "https://github.com/lvncer/launcher",
   },
@@ -17,12 +17,12 @@ export const PROJECTS = [
     image: "/images/music-player-tui.png",
     technologies: ["Go"],
     category: "ツール",
-    status: "開発中",
+    status: "公開中",
     year: "2026",
     github: "https://github.com/lvncer/music-player-tui",
   },
   {
-    title: "home",
+    title: "homepub",
     description:
       "ポモドーロ時計や再生中の音楽などを表示できるデスクトップアプリ",
     image: "/images/home.jpeg",
@@ -35,9 +35,9 @@ export const PROJECTS = [
       "Tauri",
     ],
     category: "ツール",
-    status: "開発中",
+    status: "公開中",
     year: "2026",
-    github: "https://github.com/lvncer/home",
+    github: "https://github.com/lvncer/homepub",
   },
   {
     title: "Clipgest",
@@ -75,7 +75,7 @@ export const PROJECTS = [
       "Railway",
     ],
     category: "ツール",
-    status: "開発中",
+    status: "公開中",
     year: "2025",
     github: "https://github.com/lvncer/coeur",
   },
