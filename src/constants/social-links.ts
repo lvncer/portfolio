@@ -2,7 +2,6 @@ import {
   BookOpen,
   ChartNoAxesColumn,
   Github,
-  Instagram,
   Mail,
   Speaker,
   Youtube,
@@ -50,13 +49,6 @@ export const SOCIAL_LINKS = [
     description: "Tech presentations",
     icon: Speaker,
     url: "https://speakerdeck.com/lvncer",
-    isExternalLink: true,
-  },
-  {
-    title: "Instagram",
-    description: "Personal life & photos",
-    icon: Instagram,
-    url: "https://www.instagram.com/lvncer/",
     isExternalLink: true,
   },
   {
