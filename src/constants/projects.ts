@@ -2,6 +2,16 @@ import type { Project } from "@/types/project"
 
 export const PROJECTS = [
   {
+    title: "Paranoia",
+    description: "2D ローグライク監視ゲーム",
+    image: "/images/paranoia.webp",
+    technologies: ["Godot"],
+    category: "ゲーム",
+    status: "制作中",
+    year: "2026",
+    live: "https://github.com/lvncers-siw-practices/paranoia-lp",
+  },
+  {
     title: "launcher",
     description: "Goで作る“自作 TUI rofi（ランチャー）”",
     video: "videos/launcher.mov",
