@@ -4,7 +4,6 @@ import {
   Github,
   Mail,
   Speaker,
-  Youtube,
 } from "lucide-react"
 import type { SocialLink } from "@/types/social-link"
 
@@ -35,13 +34,6 @@ export const SOCIAL_LINKS = [
     description: "My blog posts",
     icon: BookOpen,
     url: "https://blog.lvncer.dev",
-    isExternalLink: true,
-  },
-  {
-    title: "YouTube",
-    description: "Videos & channel updates",
-    icon: Youtube,
-    url: "https://youtube.com/@lvncer-k8d?si=O96AVvC8xg_w12Dn",
     isExternalLink: true,
   },
   {
