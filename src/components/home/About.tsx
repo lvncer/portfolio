@@ -26,7 +26,7 @@ const ProfileImage = () => {
 
 export const About = () => {
   return (
-    <div className="relative py-32 overflow-hidden" id="about">
+    <div className="relative py-42 overflow-hidden" id="about">
       <div className="absolute inset-0 bg-black/10" />
 
       <div className="absolute top-1/3 left-0 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl" />

@@ -19,7 +19,7 @@ export const SOCIAL_LINKS = [
     title: "lvncerpedia",
     description: "My personal knowledge base",
     icon: BookOpen,
-    url: "https://github.com/lvncerpedia",
+    url: "https://pedia.lvncer.dev",
     isExternalLink: true,
   },
   {

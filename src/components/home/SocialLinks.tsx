@@ -4,7 +4,7 @@ import { SOCIAL_LINKS } from "@/constants/social-links"
 export const SocialLinks = () => {
   return (
     <div
-      className="relative py-12 pb-32 overflow-hidden scroll-mt-32"
+      className="relative py-2 pb-12 overflow-hidden scroll-mt-32"
       id="contact"
     >
       {/* Minimal overlay */}
