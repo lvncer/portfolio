@@ -14,6 +14,7 @@ const navItems = [
   { path: "/skills", label: "Skills" },
   { path: "/experiences", label: "Experience" },
   { path: "/projects", label: "Projects" },
+  { path: "/gallery", label: "Gallery" },
 ]
 
 export default function Navbar() {

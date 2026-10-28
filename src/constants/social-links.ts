@@ -1,6 +1,7 @@
 import {
   BookOpen,
   ChartNoAxesColumn,
+  Gamepad2,
   Github,
   Mail,
   Speaker,
@@ -41,6 +42,13 @@ export const SOCIAL_LINKS = [
     description: "Tech presentations",
     icon: Speaker,
     url: "https://speakerdeck.com/lvncer",
+    isExternalLink: true,
+  },
+  {
+    title: "Steam",
+    description: "My Steam profile",
+    icon: Gamepad2,
+    url: "https://steamcommunity.com/profiles/76561199170750125/",
     isExternalLink: true,
   },
   {

@@ -4,7 +4,7 @@ export const PROJECTS = [
   {
     title: "Paranoia",
     description: "2D ローグライク監視ゲーム",
-    image: "/images/paranoia.webp",
+    image: "/images/project/paranoia.webp",
     technologies: ["Godot"],
     category: "ゲーム",
     status: "制作中",
@@ -24,7 +24,7 @@ export const PROJECTS = [
   {
     title: "Music Player TUI",
     description: "再生中の音楽をターミナルで操作できるツール",
-    image: "/images/music-player-tui.png",
+    image: "/images/project/music-player-tui.png",
     technologies: ["Go"],
     category: "ツール",
     status: "公開中",
@@ -35,7 +35,7 @@ export const PROJECTS = [
     title: "homepub",
     description:
       "ポモドーロ時計や再生中の音楽などを表示できるデスクトップアプリ",
-    image: "/images/home.jpeg",
+    image: "/images/project/home.jpeg",
     technologies: [
       "TypeScript",
       "React",
@@ -53,7 +53,7 @@ export const PROJECTS = [
     title: "Clipgest",
     description:
       "気になった Web ページの URL をブラウザ拡張から一瞬で保存して、ダッシュボードで週次・月次ダイジェストにまとめる Web アプリ",
-    image: "/images/clipgest.jpeg",
+    image: "/images/project/clipgest.jpeg",
     technologies: [
       "Next.js",
       "Go",
@@ -111,7 +111,7 @@ export const PROJECTS = [
     title: "cc-changelogs",
     description:
       "Claude Code リポジトリの CHANGELOG.md 変更を 5 分毎に監視し、DeepL で日本語翻訳して Discord に美しい通知を送るシステムです。",
-    image: "/images/cc-changelog.png",
+    image: "/images/project/cc-changelog.png",
     technologies: [
       "Node.js",
       "Discord.js",
@@ -140,7 +140,7 @@ export const PROJECTS = [
     title: "Echoes",
     description:
       "AIの3Dモデルと直接会話ができるWebアプリ。音声入力から認識・合成・出力までできます。",
-    image: "/images/echoes.jpeg",
+    image: "/images/project/echoes.jpeg",
     technologies: [
       "Next.Js",
       "TypeScript",
@@ -157,7 +157,7 @@ export const PROJECTS = [
     title: "NameCard",
     description:
       "Markdown ファイルから美しい名刺を作成・エクスポートできる CLI ツール",
-    image: "/images/name-card.jpg",
+    image: "/images/project/name-card.jpg",
     technologies: [
       "Next.Js",
       "TypeScript",
@@ -175,7 +175,7 @@ export const PROJECTS = [
     title: "LightningTalks",
     description:
       "ライトニングトーク管理サイト。学校でLTを行いたいという意見が多かったため作成しました。学校の学生だけでなく、外部のユーザも登録可能です。",
-    image: "/images/lt.png",
+    image: "/images/project/lt.png",
     technologies: ["Next.Js", "TypeScript", "Neon", "Clerk"],
     category: "Webアプリケーション",
     status: "公開中",
@@ -187,7 +187,7 @@ export const PROJECTS = [
     title: "Bookmarks",
     description:
       "シンプルなブックマークマネージャー。カテゴリ別にブックマークを管理できます。",
-    image: "/images/bookmark.png",
+    image: "/images/project/bookmark.png",
     technologies: ["Next.Js", "TypeScript", "Supabase", "Clerk"],
     category: "Webアプリケーション",
     status: "停止",
@@ -198,7 +198,7 @@ export const PROJECTS = [
     title: "Next SNS",
     description:
       "シンプルなSNSのクローンサイト。フルスタックで作成した初めてのWebアプリです。",
-    image: "/images/nextsns.png",
+    image: "/images/project/nextsns.png",
     technologies: [
       "Next.js",
       "TypeScript",

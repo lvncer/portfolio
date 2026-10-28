@@ -1,8 +1,6 @@
 "use client"
 
 import { About } from "@/components/home/About"
-import { FeatureSection } from "@/components/home/FeatureSection"
-// import { Hero } from "@/components/home/Hero"
 import { SocialLinks } from "@/components/home/SocialLinks"
 import { Timeline } from "@/components/home/Timeline"
 
@@ -14,7 +12,6 @@ export default function Home() {
         <About />
         <SocialLinks />
         <Timeline />
-        <FeatureSection />
       </div>
     </div>
   )
