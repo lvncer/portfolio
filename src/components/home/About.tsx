@@ -88,8 +88,7 @@ export const About = () => {
 
                 <div className="pt-4">
                   <p className="text-lg text-gray-300 font-light italic">
-                    &quot; Aspire to be an Engineer who Changes the
-                    World!!&quot;
+                    &quot;Aspire to be an Engineer who Changes the World !&quot;
                   </p>
                 </div>
               </div>
