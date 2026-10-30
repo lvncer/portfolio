@@ -6,15 +6,14 @@ export const SkillIcon = ({
   name,
   imageUrl,
   imageUrls,
-  size,
+  size = "sm",
 }: SkillIconProps) => {
-  const iconSize =
-    size === "lg" ? "w-12 h-12" : size === "md" ? "w-9 h-9" : "w-8 h-8"
-  const pixelSize = size === "lg" ? 48 : size === "md" ? 36 : 32
+  const iconSize = size === "lg" ? "w-5 h-5" : "w-4 h-4"
+  const pixelSize = size === "lg" ? 20 : 16
 
   if (imageUrls?.length) {
     return (
-      <div className="flex -space-x-2">
+      <div className="flex -space-x-1">
         {imageUrls.map((url) => (
           <Image
             key={url}
@@ -22,7 +21,7 @@ export const SkillIcon = ({
             alt={name}
             width={pixelSize}
             height={pixelSize}
-            className={`${iconSize} rounded-full ring-2 ring-black/80 bg-black/80`}
+            className={`${iconSize} rounded-full ring-1 ring-black/80 bg-black/80`}
           />
         ))}
       </div>
@@ -43,7 +42,7 @@ export const SkillIcon = ({
 
   return (
     <div
-      className={`${iconSize} rounded-lg bg-white/10 flex items-center justify-center text-xs font-semibold text-white/80`}
+      className={`${iconSize} shrink-0 rounded-full bg-white/10 flex items-center justify-center text-[8px] font-semibold text-white/80`}
     >
       {name.slice(0, 2).toUpperCase()}
     </div>
