@@ -1,6 +1,5 @@
 export { CategorySection } from "@/components/skills/CategorySection"
 export { LanguageGroup } from "@/components/skills/LanguageGroup"
-export { ProficiencyIndicator } from "@/components/skills/ProficiencyIndicator"
 export { ProgrammingLanguagesSection } from "@/components/skills/ProgrammingLanguagesSection"
 export { SkillIcon } from "@/components/skills/SkillIcon"
 export { SkillsView } from "@/components/skills/SkillsView"

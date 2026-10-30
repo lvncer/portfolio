@@ -12,6 +12,7 @@
         "clsx": "^2.1.1",
         "eslint-config-next": "^15.1.6",
         "framer-motion": "^12.23.24",
+        "lucide": "^1.64.0",
         "lucide-react": "^0.555.0",
         "next": "^16.0.7",
         "next-themes": "^0.4.6",
@@ -680,6 +681,8 @@
     "log-update": ["log-update@6.1.0", "", { "dependencies": { "ansi-escapes": "^7.0.0", "cli-cursor": "^5.0.0", "slice-ansi": "^7.1.0", "strip-ansi": "^7.1.0", "wrap-ansi": "^9.0.0" } }, "sha512-9ie8ItPR6tjY5uYJh8K/Zrv/RMZ5VOlOWvtZdEHYSTFKZfIBPQa9tOAEeAWhd+AnIneLJ22w5fjOYtoutpWq5w=="],
 
     "loose-envify": ["loose-envify@1.4.0", "", { "dependencies": { "js-tokens": "^3.0.0 || ^4.0.0" }, "bin": "cli.js" }, "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q=="],
+
+    "lucide": ["lucide@1.64.0", "", {}, "sha512-2k481p+2dnI88E5chX8D1niwJzar/0EMFZwS93E/umHVxl+Po5uoDIGuo64Ij3a35YaD1J6EsWulDzKaod5wOw=="],
 
     "lucide-react": ["lucide-react@0.555.0", "", { "peerDependencies": { "react": "^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0" } }, "sha512-D8FvHUGbxWBRQM90NZeIyhAvkFfsh3u9ekrMvJ30Z6gnpBHS6HC6ldLg7tL45hwiIz/u66eKDtdA23gwwGsAHA=="],
 

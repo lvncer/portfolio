@@ -6,7 +6,7 @@ export const SkillsView = () => {
   return (
     <div className="min-h-screen">
       <div className="container mx-auto px-4 py-32">
-        <div className="mx-auto max-w-6xl space-y-10">
+        <div className="mx-auto max-w-3xl space-y-6">
           <h1 className="text-4xl font-bold">Skills</h1>
 
           <ProgrammingLanguagesSection />
