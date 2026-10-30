@@ -2,8 +2,9 @@ import "./globals.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import Footer from "@/components/footer"
+import { HalloweenCornerImage } from "@/components/halloween/HalloweenCornerImage"
+import { SeasonalBackground } from "@/components/halloween/SeasonalBackground"
 import Navbar from "@/components/navbar"
-import Squares from "@/components/Squares"
 import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -67,18 +68,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="relative z-10 min-h-screen bg-background gradient-bg">
-            <div className="fixed inset-0 -z-10 pointer-events-none">
-              <Squares
-                speed={0.2}
-                squareSize={40}
-                direction="diagonal"
-                borderColor="#ccc"
-                hoverFillColor={undefined}
-              />
-            </div>
+            <SeasonalBackground />
             <Navbar />
             <main>{children}</main>
             <Footer />
+            <HalloweenCornerImage />
           </div>
         </ThemeProvider>
       </body>
