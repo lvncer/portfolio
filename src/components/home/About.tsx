@@ -1,6 +1,10 @@
+"use client"
+
 import Image from "next/image"
+import { HalloweenSpeechBubble } from "@/components/halloween/HalloweenSpeechBubble"
 import { AnimatedElement } from "@/components/ui/animated-element"
 import { LazyLoad } from "@/components/ui/lazy-load"
+import { useHalloweenActive } from "@/hooks/useHalloweenActive"
 import myimg from "../../../public/images/profile.jpg"
 
 // プロフィール画像を最適化するコンポーネント
@@ -25,6 +29,8 @@ const ProfileImage = () => {
 }
 
 export const About = () => {
+  const isHalloween = useHalloweenActive()
+
   return (
     <div className="relative py-42 overflow-hidden" id="about">
       <div className="absolute inset-0 bg-black/10" />
@@ -58,6 +64,8 @@ export const About = () => {
                     Takahashi Kihiro
                   </h2>
                 </div>
+
+                {isHalloween ? <HalloweenSpeechBubble /> : null}
 
                 <div className="space-y-4">
                   <div className="space-y-2 text-gray-200">
